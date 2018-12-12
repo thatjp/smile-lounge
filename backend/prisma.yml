@@ -1,6 +1,7 @@
-endpoint: ${env:PRISMA_ENDPOINT}
+# endpoint: ${env:PRISMA_ENDPOINT}
+endpoint: https://smile-lounge-prod-47d4fcf29c.herokuapp.com/smile-lounge-prod/prod
 datamodel: datamodel.prisma
-# secret: ${env:PRISMA_SECRET}
+secret: ${env:PRISMA_SECRET}
 hooks:
   post-deploy:
     - graphql get-schema -p prisma
