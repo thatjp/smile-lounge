@@ -1,8 +1,8 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
-import Header from '../Header/Header';
-import Meta from '../Meta/Meta';
+import Header from '../Header';
+import Meta from '../Meta';
 
 const theme = {
   red: '#ff0000',
