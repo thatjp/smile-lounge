@@ -9,7 +9,6 @@ class HomePage extends Component {
       <div>
         <ImageContainer/>
         <PageSection />
-        <Footer />
       </div>
     );
   }

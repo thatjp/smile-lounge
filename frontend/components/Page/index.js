@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import Header from '../Header';
 import Meta from '../Meta';
+import Footer from '../Footer';
 
 const theme = {
   red: '#ff0000',
@@ -50,6 +51,9 @@ injectGlobal`
     text-decoration: none;
     color: ${theme.black}
   }
+  ul {
+    list-style-type: none;
+  }
 `;
 
 class Page extends Component {
@@ -62,6 +66,7 @@ class Page extends Component {
           <Inner>
             {this.props.children}
           </Inner>
+          <Footer />
         </StyledPage>
       </ThemeProvider>
     );
