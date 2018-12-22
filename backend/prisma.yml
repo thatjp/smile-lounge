@@ -1,4 +1,4 @@
-endpoint: https://smile-lounge-prod-47d4fcf29c.herokuapp.com/smile-lounge-prod/prod
+endpoint: https://sl-yoga-prod.herokuapp.com/
 datamodel: datamodel.prisma
 secret: ${env:PRISMA_SECRET}
 hooks:
