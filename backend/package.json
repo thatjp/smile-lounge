@@ -1,5 +1,5 @@
 {
-  "name": "sick-fits-backend",
+  "name": "sl-backend",
   "version": "1.0.0",
   "engines": {
     "node": "11.2.0"
@@ -25,10 +25,6 @@
     "prisma": "1.17.1",
     "prisma-binding": "2.1.6",
     "stripe": "^6.12.1"
-  },
-  "license": "MIT",
-  "repository": {
-    "url": "wesbos.com"
   },
   "babel": {
     "presets": [
