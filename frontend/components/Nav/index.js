@@ -9,6 +9,9 @@ const Nav = () => (
     <Link href="/profile">
       <a>Account</a>
     </Link>
+    <Link href="/signup">
+      <a>signup</a>
+    </Link>
   </NavStyle>
 );
 
