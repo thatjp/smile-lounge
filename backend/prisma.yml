@@ -1,4 +1,3 @@
-#endpoint: https://sl-yoga-prod.herokuapp.com/
 endpoint: https://sl-prod-c7fbae30d1.herokuapp.com/sl-prod/prod
 datamodel: datamodel.prisma
 secret: ${env:PRISMA_SECRET}
