@@ -39,6 +39,49 @@ const mutations = {
     return user;
   },
 
+  async signin(parent, { email, password }, ctx, info) {
+    // create a user const based on matching the user wehre the user emails match
+    const user = await ctx.db.query.user({ where: { email } });
+    if (!user) {
+      throw new Error(`User not found for email ${email}`);
+    }
+    // check to see if the password is vaild by comparing the user password and the input password
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) {
+      throw new Error('Invalid Password');
+    }
+    // sign a new json web token
+    const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
+    // cerate a cookie with the JSON web token
+    ctx.response.cookie('token', token, {
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24 * 365,
+    });
+    return user;
+  },
+
+  async signout(parent, { email, password }, ctx, info) {
+    // // create a user const based on matching the user wehre the user emails match
+    const user = await ctx.db.query.user({ where: { email } });
+    if (!user) {
+      throw new Error(`User not found for email ${email}`);
+    }
+    // // check to see if the password is vaild by comparing the user password and the input password
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) {
+      throw new Error('Invalid Password');
+    }
+    // // sign a new json web token
+    const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
+    // // cerate a cookie with the JSON web token
+    ctx.response.cookie('token', token, {
+      httpOnly: true,
+      maxAge: 0,
+    });
+    console.log(email);
+    return user;
+  },
+
 };
 
 module.exports = mutations;

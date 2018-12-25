@@ -1,4 +1,4 @@
-import TextBlockStyle from './style'
+import TextBlockStyle from './style';
 
 const TextBlock = () => (
   <TextBlockStyle>

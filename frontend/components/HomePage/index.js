@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ImageContainer from '../ImageContainer';
 import PageSection from '../PageSection';
-import Footer from '../Footer';
 
 class HomePage extends Component {
   render() {
