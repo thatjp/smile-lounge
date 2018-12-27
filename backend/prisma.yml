@@ -1,4 +1,7 @@
+# Prod
 endpoint: https://sl-prod-c7fbae30d1.herokuapp.com/sl-prod/prod
+# Dev
+# endpoint: https://eu1.prisma.sh/joseph-harris/sick-fits/dev
 datamodel: datamodel.prisma
 secret: ${env:PRISMA_SECRET}
 hooks:
