@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
-import Form from '../styles/Form';
 import Error from '../ErrorMessage';
 import { CURRENT_USER_QUERY } from '../User';
 
@@ -39,7 +38,7 @@ class Signup extends Component {
         refetchQueries={[{ query: CURRENT_USER_QUERY }]}
       >
         { (signup, { error, loading }) => (
-          <Form
+          <form
             method="post"
             onSubmit={async (e) => {
               e.preventDefault();
@@ -56,7 +55,7 @@ class Signup extends Component {
               disabled={loading}
               aria-busy={loading}
             >
-              <h2>Trap out for an account</h2>
+              <h2>Sign Up</h2>
               <Error error={error} />
               <label htmlFor="email">
                 Email
@@ -92,7 +91,7 @@ class Signup extends Component {
               </label>
               <button type="submit">Sign Up</button>
             </fieldset>
-          </Form>)
+          </form>)
         }
       </Mutation>
     );
