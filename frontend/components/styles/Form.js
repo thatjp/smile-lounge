@@ -14,8 +14,9 @@ const loading = keyframes`
 
 const Form = styled.form`
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
+
   background: rgba(0, 0, 0, 0.02);
-  border: 5px solid white;
+  border: 2px solid #000000;
   padding: 20px;
   font-size: 1.5rem;
   line-height: 1.5;
@@ -39,9 +40,9 @@ const Form = styled.form`
   button,
   input[type='submit'] {
     width: auto;
-    background: red;
-    color: white;
-    border: 0;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
     font-size: 2rem;
     font-weight: 600;
     padding: 0.5rem 1.2rem;
@@ -54,10 +55,10 @@ const Form = styled.form`
       opacity: 0.5;
     }
     &::before {
-      height: 10px;
+      height: 2px;
       content: '';
       display: block;
-      background-image: linear-gradient(to right, #ff3019 0%, #e2b04a 50%, #ff3019 100%);
+      background-image: linear-gradient(to right, #000000 0%, #ffffff 50%, #000000 100%);
     }
     &[aria-busy='true']::before {
       background-size: 50% auto;
