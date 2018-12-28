@@ -1,8 +1,12 @@
+import React from 'react';
 import Profile from '../components/Profile';
+import SignInWrapper from '../components/SignInWrapper';
 
 const ProfilePage = () => (
   <div>
-    <Profile />
+    <SignInWrapper>
+      <Profile />
+    </SignInWrapper>
   </div>
 );
 
