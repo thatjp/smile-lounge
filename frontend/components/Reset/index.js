@@ -8,7 +8,7 @@ import Form from '../styles/Form';
 
 const REQUEST_RESET_MUTATION = gql`
   mutation REQUEST_RESET_MUTATION(
-    $resetToken: String!, $password: String!, confirmPassword: String!
+    $resetToken: String!, $password: String!, $confirmPassword: String!
 ) {
     resetPassword(resetToken: $resetToken,
     password: $password, confirmPassword: $confirmPassword) {
