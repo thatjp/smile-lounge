@@ -43,7 +43,7 @@ class Reset extends Component {
         variables={{
           resetToken: this.props.resetToken,
           password: this.state.password,
-          confirmPassword: this.state.confirmPasswo rd,
+          confirmPassword: this.state.confirmPassword,
         }}
         refetchQueries={[{ query: CURRENT_USER_QUERY }]}
       >
