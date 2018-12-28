@@ -36,12 +36,6 @@ const Header = () => (
         <Nav />
       </HeaderNav>
     </div>
-    {/*
-    TODO
-    <div>
-      Cart
-    </div>
-    */}
   </div>
 );
 

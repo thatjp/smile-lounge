@@ -4,24 +4,24 @@
 }
 
 #nprogress .bar {
-  background: red;
+  background: #000000;
   position: fixed;
   z-index: 1031;
   top: 0;
   left: 0;
 
   width: 100%;
-  height: 5px;
+  height: 2px;
 }
 
-/* Fancy blur effect */
+/* blur */
 #nprogress .peg {
   display: block;
   position: absolute;
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px red, 0 0 5px red;
+  box-shadow: 0 0 10px #000000, 0 0 5px #000000;
   opacity: 1.0;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -30,7 +30,7 @@
 }
 
 /* Remove these to get rid of the spinner */
-#nprogress .spinner {
+/* #nprogress .spinner {
   display: block;
   position: fixed;
   z-index: 1031;
@@ -50,7 +50,7 @@
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;
           animation: nprogress-spinner 400ms linear infinite;
-}
+} */
 
 .nprogress-custom-parent {
   overflow: hidden;

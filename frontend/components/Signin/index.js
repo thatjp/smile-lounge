@@ -3,6 +3,7 @@ import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import Error from '../ErrorMessage';
 import { CURRENT_USER_QUERY } from '../User';
+import Form from '../styles/Form';
 
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION(
@@ -36,7 +37,7 @@ class Signin extends Component {
         refetchQueries={[{ query: CURRENT_USER_QUERY }]}
       >
         { (signin, { error, loading }) => (
-          <form
+          <Form
             method="post"
             onSubmit={async (e) => {
               e.preventDefault();
@@ -78,7 +79,7 @@ class Signin extends Component {
               </label>
               <button type="submit">Sign In</button>
             </fieldset>
-          </form>)
+          </Form>)
         }
       </Mutation>
     );

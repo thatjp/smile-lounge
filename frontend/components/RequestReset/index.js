@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import Error from '../ErrorMessage';
+import Form from '../styles/Form';
 
 const REQUEST_RESET_MUTATION = gql`
   mutation REQUEST_RESET_MUTATION(
@@ -29,10 +30,10 @@ class RequestReset extends Component {
     return (
       <Mutation
         mutation={REQUEST_RESET_MUTATION}
-        variables={this.state}        
+        variables={this.state}
       >
         { (reset, { error, loading, called }) => (
-          <form
+          <Form
             method="post"
             onSubmit={async (e) => {
               e.preventDefault();
@@ -62,7 +63,7 @@ class RequestReset extends Component {
               </label>
               <button type="submit">Request Reset</button>
             </fieldset>
-          </form>)
+          </Form>)
         }
       </Mutation>
     );

@@ -16,7 +16,7 @@ const Form = styled.form`
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
 
   background: rgba(0, 0, 0, 0.02);
-  border: 2px solid #000000;
+  border: .5px solid #000000;
   padding: 20px;
   font-size: 1.5rem;
   line-height: 1.5;
