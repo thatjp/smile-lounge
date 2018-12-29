@@ -29,10 +29,11 @@ const Header = () => (
     <div className="bar">
       <HeaderNav>
         <Link href="/">
-          <a>Smile Lounge</a>
+          <a><img src="../static/assets/SmileLounge-300.png" alt=""/></a>
         </Link>
       </HeaderNav>
       <HeaderNav nav>
+      
         <Nav />
       </HeaderNav>
     </div>

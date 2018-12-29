@@ -2,7 +2,7 @@ import React from 'react';
 import ImageBlock from '../ImageBlock';
 import PageSectionStyle from './styles';
 
-const PageSection = (props) => (
+const PageSection = props => (
   <PageSectionStyle>
     <ImageBlock />
     <ImageBlock />
