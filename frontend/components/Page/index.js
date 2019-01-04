@@ -4,6 +4,7 @@ import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import Header from '../Header';
 import Meta from '../Meta';
 import Footer from '../Footer';
+import BannerContainer from '../BannerContainer';
 
 const theme = {
   red: '#ff0000',
@@ -28,7 +29,7 @@ const Inner = styled.div`
 injectGlobal`
   @font-face {
     font-family: 'radnika_next';
-    src: url('/static/radnikanext-medium-webfont.woff2')
+    src: url('/static/fonts/WorkSans-Light.ttf')
     format('woff2');
     font-weight: normal;
     font-style: normal;
@@ -63,6 +64,7 @@ class Page extends Component {
         <StyledPage>
           <Meta />
           <Header />
+          <BannerContainer />
           <Inner>
             {this.props.children}
           </Inner>

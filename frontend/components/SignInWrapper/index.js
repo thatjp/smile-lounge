@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 import { CURRENT_USER_QUERY } from '../User';
 import Signin from '../Signin';
 
-const SignInWrapper = props => (
+const SignInWrapper = () => (
   <Query
     query={CURRENT_USER_QUERY}
   >

@@ -33,7 +33,6 @@ const Header = () => (
         </Link>
       </HeaderNav>
       <HeaderNav nav>
-      
         <Nav />
       </HeaderNav>
     </div>

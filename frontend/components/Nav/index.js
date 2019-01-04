@@ -5,10 +5,13 @@ import NavStyle from './style';
 import User from '../User';
 import Signout from '../Signout';
 
+const me = true
+
 const Nav = () => (
-  <User>
-    {({ data: { me } }) => (
-      <NavStyle>
+  // <User>
+  //   {({ data: { me } }) => (
+  //     <NavStyle>
+  <div>
         <Link href="/signup">
           <a>signup</a>
         </Link>
@@ -36,9 +39,13 @@ const Nav = () => (
             <a>Sign In</a>
           </Link>
         )}
-      </NavStyle>
-    )}
-  </User>
+  </div>
+  //     </NavStyle>
+  //   )}
+  // </User>
+  // <div>
+  //   Nav
+  // </div>
 );
 
 export default Nav;

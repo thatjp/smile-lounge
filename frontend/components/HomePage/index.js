@@ -7,7 +7,6 @@ class HomePage extends Component {
   render() {
     return (
       <HomePageStyles>
-        <BannerContainer />
         <PageSection />
       </HomePageStyles>
     );

@@ -1,10 +1,15 @@
+import Link from 'next/link';
 import TextBlockStyle from './style';
 
 const TextBlock = () => (
   <TextBlockStyle>
     <h2>Conciege Alignment</h2>
     <p>Coming soon</p>
-    <button> For more information</button>
+    <Link href="/about">
+      <a>
+        For more information
+      </a>
+    </Link>
   </TextBlockStyle>
 );
 

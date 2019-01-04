@@ -36,10 +36,9 @@ const Footer = () => (
         <li>
           <h2>Smile Lounge</h2>
           <p>
-A premiere straightening 
-service dedicated to comfort 
-and convenience.
-
+            A premiere straightening
+            service dedicated to comfort
+            and convenience.
           </p>
         </li>
       </ul>

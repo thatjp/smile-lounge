@@ -7,7 +7,7 @@ class Calender extends Component {
       <CalenderStyles>
         <p>This is a calender</p>
       </CalenderStyles>
-    )
+    );
   }
 }
 
