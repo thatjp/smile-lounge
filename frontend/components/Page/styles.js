@@ -23,28 +23,28 @@ const Inner = styled.div`
 injectGlobal`
   @font-face {
     font-family: 'WorkSans-Light';
-    src: url('/static/fonts/WorkSans-Light.ttf')
+    src: url('../static/fonts/WorkSans-Light.ttf')
     format('ttf');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: 'WorkSans-Medium';
-    src: url('/static/fonts/WorkSans-Medium.ttf')
+    src: url('../static/fonts/WorkSans-Medium.ttf')
     format('ttf');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: 'WorkSans-Bold';
-    src: url('/static/fonts/WorkSans-Bold.ttf')
+    src: url('../static/fonts/WorkSans-Bold.ttf')
     format('ttf');
     font-weight: normal;
     font-style: bold;
   }
   @font-face {
     font-family: 'WorkSans-Light';
-    src: url('/static/fonts/WorkSans-Light.ttf')
+    src: url('../static/fonts/WorkSans-Light.ttf')
     format('ttf');
     font-weight: lighter;
     font-style: bold;
