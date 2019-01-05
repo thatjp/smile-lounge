@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import TextBlockStyle from './style';
+import TextBlockStyle from './styles';
 
 const TextBlock = () => (
   <TextBlockStyle>

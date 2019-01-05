@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import NProgress from 'nprogress';
-import styled from 'styled-components';
+import NavStyles from './styles';
 import Nav from '../Nav';
 
 Router.onRouteChangeStart = () => {
@@ -19,22 +19,19 @@ Router.onRouteChangeError = () => {
   NProgress.done();
 };
 
-const HeaderNav = styled.div`
-  display: inline-block;
-  float: ${props => (props.nav ? 'right' : null)};
-`;
-
 const Header = () => (
   <div>
     <div className="bar">
-      <HeaderNav>
+      <NavStyles>
         <Link href="/">
-          <a><img src="../static/assets/SmileLounge-300.png" alt=""/></a>
+          <a>
+            <img src="../static/assets/SmileLounge-300.png" alt="Smile House" />
+          </a>
         </Link>
-      </HeaderNav>
-      <HeaderNav nav>
+      </NavStyles>
+      <NavStyles nav>
         <Nav />
-      </HeaderNav>
+      </NavStyles>
     </div>
   </div>
 );

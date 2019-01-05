@@ -1,17 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import NavStyle from './style';
+import NavStyle from './styles';
 import User from '../User';
 import Signout from '../Signout';
 
-const me = true
 
 const Nav = () => (
-  // <User>
-  //   {({ data: { me } }) => (
-  //     <NavStyle>
-  <div>
+  <User>
+    {({ data: { me } }) => (
+      <NavStyle>
         <Link href="/signup">
           <a>signup</a>
         </Link>
@@ -39,13 +37,9 @@ const Nav = () => (
             <a>Sign In</a>
           </Link>
         )}
-  </div>
-  //     </NavStyle>
-  //   )}
-  // </User>
-  // <div>
-  //   Nav
-  // </div>
+      </NavStyle>
+    )}
+  </User>
 );
 
 export default Nav;
