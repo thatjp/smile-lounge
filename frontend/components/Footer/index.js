@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import FooterStyle from './style';
+import FooterStyle from './styles';
 
 const Footer = () => (
   <FooterStyle>

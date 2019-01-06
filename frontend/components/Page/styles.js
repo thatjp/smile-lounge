@@ -11,7 +11,10 @@ const theme = {
 };
 
 const StyledPage = styled.div`
+  height: 100%;
+  position: relative;
   color: ${props => props.theme.black};
+  padding-bottom: 400px;
 `;
 
 const Inner = styled.div`
@@ -54,16 +57,17 @@ injectGlobal`
     font-weight: normal;
     font-style: bold;
   }
-  html {
+  html, body {
     box-sizing: border-box;
     font-size: 10px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
   body {
-    padding: 0;
-    margin: 0;
     font-size: 1.5rem;
     line-height: 2;
     font-family: 'WorkSans-Light';
@@ -76,7 +80,6 @@ injectGlobal`
     list-style-type: none;
   }
 `;
-
 
 export {
   theme,

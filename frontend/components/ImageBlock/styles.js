@@ -5,17 +5,21 @@ const ImageBlockStyles = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  .content {
-    padding: 20px;
+  .container {
+    width: 30%;
+  }
+  .content {    
     border: 1px solid green;
+    width: 50%
   }
   .title__image-content-title {
     
   }
   img {
-    max-width: 30rem;
-    width: 100%;
-    margin: 20px;
+    max-width: 50%;
+    @media (max-width: 700px) {
+      max-width: 50%;
+    }
   }
 `;
 
