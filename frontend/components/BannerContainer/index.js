@@ -4,10 +4,8 @@ import TextBlock from '../TextBlock';
 
 const BannerContainer = () => (
   <BannerContainerStyles>
-    <div className="container">
-      <img src="../static/assets/banner-smile-1.png" alt="Smile House" />
-      <TextBlock />
-    </div>
+    <img src="../static/assets/banner-smile-1.png" alt="Smile House" />
+    <TextBlock />
   </BannerContainerStyles>
 );
 

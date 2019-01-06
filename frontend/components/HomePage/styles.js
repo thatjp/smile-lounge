@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 const HomePageStyles = styled.div`
-  height: 800px;
+  height: 1500px;
 `;
 
-export default HomePageStyles;
+const HomePageInnerStyle = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+`;
+
+export { HomePageStyles, HomePageInnerStyle  };

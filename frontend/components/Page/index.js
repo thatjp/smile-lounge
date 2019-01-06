@@ -5,7 +5,11 @@ import PropTypes from 'prop-types';
 import Header from '../Header';
 import Meta from '../Meta';
 import Footer from '../Footer';
-import { theme, StyledPage, Inner } from './styles';
+import {
+  theme,
+  StyledPage,
+  Inner,
+} from './styles';
 
 class Page extends Component {
   render() {
@@ -15,7 +19,7 @@ class Page extends Component {
         <StyledPage>
           <Meta />
           <Header />
-          <Inner>
+          <Inner homepage="100%">
             { children }
           </Inner>
           <Footer />
@@ -28,4 +32,5 @@ class Page extends Component {
 Page.propTypes = {
   children: PropTypes.object.isRequired,
 };
+
 export default Page;

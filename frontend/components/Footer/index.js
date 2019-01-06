@@ -4,7 +4,7 @@ import FooterStyle from './style';
 
 const Footer = () => (
   <FooterStyle>
-    <div className="footer-child">
+    <div>
       <ul>
         <h2>Navigation</h2>
         <li>
@@ -15,7 +15,7 @@ const Footer = () => (
         <li>Products</li>
       </ul>
     </div>
-    <div className="footer-child">
+    <div>
       <ul>
         <h2>More</h2>
         <li>
@@ -31,7 +31,7 @@ const Footer = () => (
         <li>Search</li>
       </ul>
     </div>
-    <div className="footer-child">
+    <div>
       <ul>
         <li>
           <h2>Smile Lounge</h2>

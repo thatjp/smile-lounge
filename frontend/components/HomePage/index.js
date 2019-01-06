@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import BannerContainer from '../BannerContainer';
 import PageSection from '../PageSection';
-import HomePageStyles from './styles';
+import BannerContainer from '../BannerContainer';
+import { HomePageStyles, HomePageInnerStyle } from './styles';
 
 class HomePage extends Component {
   render() {
     return (
       <HomePageStyles>
         <BannerContainer />
-        <PageSection />
+        <HomePageInnerStyle>
+          <PageSection />
+        </HomePageInnerStyle>
       </HomePageStyles>
     );
   }
