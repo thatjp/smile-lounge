@@ -8,8 +8,7 @@ const ImageBlockStyles = styled.div`
   .container {
     width: 30%;
   }
-  .content {    
-    border: 1px solid green;
+  .content {
     width: 50%
   }
   .title__image-content-title {
