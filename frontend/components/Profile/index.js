@@ -33,7 +33,7 @@ const Profile = () => (
           </a>
         </div>
       </Link>
-      <Link href="/settings">
+      <Link href="/inbox">
         <div className="link 4">
           <a>
             <h2>

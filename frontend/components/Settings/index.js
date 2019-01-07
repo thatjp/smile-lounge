@@ -2,9 +2,9 @@ import React from 'react';
 import SettingsStyles from './styles';
 
 const Settings = () => (
-  <div>
-    <p>things is the settings page</p>
-  </div>
+  <SettingsStyles>
+    <h1>Soon to be settings page</h1>
+  </SettingsStyles>
 );
 
 export default Settings;

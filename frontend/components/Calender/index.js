@@ -5,7 +5,7 @@ class Calender extends Component {
   render() {
     return (
       <CalenderStyles>
-        <p>This is a calender</p>
+        <h1>Soon to be calender page</h1>
       </CalenderStyles>
     );
   }
