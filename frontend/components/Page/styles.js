@@ -14,7 +14,6 @@ const StyledPage = styled.div`
   height: 100%;
   position: relative;
   color: ${props => props.theme.black};
-  padding-bottom: 300px;
 `;
 
 const Inner = styled.div`
