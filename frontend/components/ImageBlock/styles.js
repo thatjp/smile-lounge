@@ -7,8 +7,14 @@ const ImageBlockStyles = styled.div`
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  @media (max-width: 700px) {
+      display: block;
+    }
   .container {
     width: 30%;
+    @media (max-width: 700px) {
+      width: 100%;
+    }
   }
   .content {
     width: 50%;

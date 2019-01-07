@@ -7,6 +7,10 @@ const FooterStyle = styled.div`
   border-top: 1px solid ${props => props.theme.lightgrey};
   height: 300px;
   padding:0px 50px;
+  @media (max-width: 700px) {
+    justify-content: left;
+    padding: 0px;
+  }
   .paragraph--footer{
     font-size: 14px;
   }
