@@ -10,32 +10,26 @@ const Nav = () => (
   <User>
     {({ data: { me } }) => (
       <NavStyle>
-        <Link href="/signup">
-          <a>signup</a>
-        </Link>
-        <Link href="/profile">
-          <a>Profile</a>
-        </Link>
         {me && (
         <>
           <Link href="/profile">
             <a>Account</a>
           </Link>
-
           <Link href="/cart">
             <a>Cart</a>
-          </Link>
-
-          <Link href="/signup">
-            <a>Sign Out</a>
           </Link>
           <Signout />
         </>
         )}
         {!me && (
-          <Link href="/signup">
-            <a>Sign In</a>
-          </Link>
+          <>
+            <Link href="/signin">
+              <a>Sign In</a>
+            </Link>
+            <Link href="/signup">
+              <a>Sign Up</a>
+            </Link>
+          </>
         )}
       </NavStyle>
     )}

@@ -5,12 +5,16 @@ const FooterStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: flex-start;
   border-top: 1px solid ${props => props.theme.lightgrey};
-  left: 0;
-  bottom: 0;
-  width: 100%;
   height: 300px;
+  padding:0px 50px;
+  .paragraph--footer{
+    /* width: 50%; */
+    font-size: 14px;
+  }
+  li {
+    width: 200px
+  }
 `;
 
 export default FooterStyle;

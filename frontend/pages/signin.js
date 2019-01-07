@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Signup from '../components/Signup';
+import Signin from '../components/Signin';
 
 const Columns = styled.div`
   display: flex;
@@ -8,10 +8,10 @@ const Columns = styled.div`
   padding: 60px;
 `;
 
-const SignupPage = () => (
+const SigninPage = () => (
   <Columns>
-    <Signup />
+    <Signin />
   </Columns>
 );
 
-export default SignupPage;
+export default SigninPage;

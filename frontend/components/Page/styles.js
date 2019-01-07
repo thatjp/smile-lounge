@@ -14,12 +14,12 @@ const StyledPage = styled.div`
   height: 100%;
   position: relative;
   color: ${props => props.theme.black};
-  padding-bottom: 400px;
+  padding-bottom: 300px;
 `;
 
 const Inner = styled.div`
   max-width: ${props => props.homepage || props.theme.maxWidth};
-  margin: 0 auto;
+  margin: auto;
 `;
 
 const Banner = styled.div`

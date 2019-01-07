@@ -33,13 +33,30 @@ const Footer = () => (
     </div>
     <div>
       <ul>
+        <h2>Smile Lounge</h2>
         <li>
-          <h2>Smile Lounge</h2>
-          <p>
+          <p className="paragraph--footer">
             A premiere straightening
             service dedicated to comfort
             and convenience.
           </p>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <h2>Follow Us</h2>
+        <li>
+          Instagram
+        </li>
+        <li>
+          Facebook
+        </li>
+        <li>
+          LinkedIn
+        </li>
+        <li>
+          Twitter
         </li>
       </ul>
     </div>
