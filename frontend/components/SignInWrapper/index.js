@@ -2,7 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { CURRENT_USER_QUERY } from '../User';
 import Signin from '../Signin';
-import Profile from '../Profile';
+import Columns from './styles';
 
 const SignInWrapper = props => (
   <Query
@@ -12,10 +12,12 @@ const SignInWrapper = props => (
       if (loading) return <p>Loading...</p>;
       if (!data.me) {
         return (
-          <div>
-            <p>Please sign In before continueing</p>
-            <Signin />
-          </div>
+          <Columns>
+            <div>
+              <p>Please sign In before continueing</p>
+              <Signin />
+            </div>
+          </Columns>
         );
       }
       return props.children;

@@ -3,11 +3,9 @@ import Profile from '../components/Profile';
 import SignInWrapper from '../components/SignInWrapper';
 
 const ProfilePage = () => (
-  <div>
-    <SignInWrapper>
-      <Profile />
-    </SignInWrapper>
-  </div>
+  <SignInWrapper>
+    <Profile />
+  </SignInWrapper>
 );
 
 export default ProfilePage;
