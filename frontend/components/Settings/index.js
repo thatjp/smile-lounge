@@ -1,9 +1,13 @@
 import React from 'react';
 import SettingsStyles from './styles';
+import Reset from '../Reset';
 
 const Settings = () => (
   <SettingsStyles>
-    <h1>Soon to be settings page</h1>
+    <div>
+      <h1>Settings</h1>
+      <Reset />
+    </div>
   </SettingsStyles>
 );
 

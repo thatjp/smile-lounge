@@ -7,15 +7,12 @@ import HeaderStyles from './styles';
 import Nav from '../Nav';
 
 Router.onRouteChangeStart = () => {
-  console.log('onRouteChangeStart');
   NProgress.start();
 };
 Router.onRouteChangeComplete = () => {
-  console.log('onRouteChangeComplete');
   NProgress.done();
 };
 Router.onRouteChangeError = () => {
-  console.log('onRouteChangeError');
   NProgress.done();
 };
 

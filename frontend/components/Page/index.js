@@ -12,6 +12,7 @@ import {
 } from './styles';
 
 class Page extends Component {
+
   render() {
     const { children } = this.props;
     return (
