@@ -53,7 +53,6 @@ class Reset extends Component {
             onSubmit={async (e) => {
               e.preventDefault();
               const res = await reset();
-              console.log(res);
               this.setState({
                 password: '',
                 consfirmPassword: '',
