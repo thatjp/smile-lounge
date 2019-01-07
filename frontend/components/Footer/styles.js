@@ -6,7 +6,7 @@ const FooterStyle = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  border-top: 1px solid #000000;
+  border-top: 1px solid ${props => props.theme.lightgrey};
   left: 0;
   bottom: 0;
   width: 100%;

@@ -2,8 +2,9 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { CURRENT_USER_QUERY } from '../User';
 import Signin from '../Signin';
+import Profile from '../Profile';
 
-const SignInWrapper = () => (
+const SignInWrapper = props => (
   <Query
     query={CURRENT_USER_QUERY}
   >
@@ -17,6 +18,7 @@ const SignInWrapper = () => (
           </div>
         );
       }
+      return props.children;
     }}
   </Query>
 );

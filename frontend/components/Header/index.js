@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import NProgress from 'nprogress';
-import NavStyles from './styles';
+import HeaderStyles from './styles';
 import Nav from '../Nav';
 
 Router.onRouteChangeStart = () => {
@@ -20,19 +20,17 @@ Router.onRouteChangeError = () => {
 };
 
 const Header = () => (
-  <div>
-    <div className="bar">
-      <NavStyles>
-        <Link href="/">
-          <a>
-            <img src="../static/assets/SmileLounge-300.png" alt="Smile House" />
-          </a>
-        </Link>
-      </NavStyles>
-      <NavStyles nav>
+  <div className="bar">
+    <HeaderStyles>
+      <Link href="/">
+        <a>
+          <img src="../static/assets/SmileLounge-300.png" alt="Smile House" />
+        </a>
+      </Link>
+      <div className="navigation">
         <Nav />
-      </NavStyles>
-    </div>
+      </div>
+    </HeaderStyles>
   </div>
 );
 
