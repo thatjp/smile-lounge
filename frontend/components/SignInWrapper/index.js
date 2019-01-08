@@ -14,7 +14,7 @@ const SignInWrapper = props => (
         return (
           <Columns>
             <div>
-              <p>Please sign In before continueing</p>
+              <p>Please sign In before continuing</p>
               <Signin />
             </div>
           </Columns>

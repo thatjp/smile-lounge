@@ -7,7 +7,7 @@ const index = () => (
     <div>
       <h2>Who We Are</h2>
       <p>
-        Smile House New York brings the expertise of an orthodontist and the convenience of modern technology to smile
+        Smile Lounge brings the expertise of an orthodontist and the convenience of modern technology to smile
         alignment. Our model allows close monitoring of your alignment to ensure that you are tracking, and 24 hour access to your
         orthodontist via email and scheduled video check-ups. Your in-person appointments are reduced by 75%.
 
