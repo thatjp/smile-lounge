@@ -18,7 +18,7 @@ const StyledPage = styled.div`
 
 const Inner = styled.div`
   max-width: ${props => props.homepage || props.theme.maxWidth};
-  margin: auto;
+  margin: 0 10%;
 `;
 
 const Banner = styled.div`
