@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CalenderStyles from './styles';
-import calendlyToken from '../../config';
 
 class Calender extends Component {
   constructor(props) {
@@ -14,19 +13,6 @@ class Calender extends Component {
   }
 
   componentDidMount() {
-    const url = 'https://calendly.com/api/v1/hooks';
-    const token = calendlyToken;
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'X-Token': token,
-        'Content-Type': 'application/json',
-        'User-Agent': 'Calendly',
-        'Accept-Encoding': 'gzip',
-      },
-    })
-      .then(res => res.json())
-      .then(data => console.log(data));
   }
 
   render() {
