@@ -7,6 +7,8 @@ const Meta = () => (
     <meta charSet="utf-8" />
     {/* <link rel="shortcut icon" href="/static/favicon.png" /> */}
     <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" />
     <title>Smile Lounge</title>
   </Head>
 );

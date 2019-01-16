@@ -1,40 +1,26 @@
 import React, { Component } from 'react';
+import Head from 'next/head';
 import CalenderStyles from './styles';
 
+// eslint-disable-next-line react/prefer-stateless-function
 class Calender extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      time: 'wednesday 9:30',
-      doctor: 'Doc Doctor PHD',
-      title: 'check up for Patience McPatient',
-      description: 'check up',
-    };
-  }
-
-  componentDidMount() {
-  }
-
   render() {
-    const {
-      time,
-      title,
-      doctor,
-      description,
-    } = this.state;
-
     return (
       <CalenderStyles>
+        <Head>
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" />
+        </Head>
         <h1>Your Appointments</h1>
-        <div className="appointment-wrapper">
-          <h2>{ title }</h2>
-          <div>
-            <p>{ doctor }</p>
-            <p>{ time }</p>
-          </div>
-          <p>{description}</p>
-
-        </div>
+        <button
+          type="button"
+          onClick={() => {
+            Calendly.showPopupWidget('https://calendly.com/jpharris-contact');
+            return false;
+          }}
+        >
+          Schedule time with me
+        </button>
       </CalenderStyles>
     );
   }
