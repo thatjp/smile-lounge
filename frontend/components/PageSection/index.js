@@ -8,10 +8,6 @@ const PageSection = () => (
       How It Works
     </h2>
     <ImageBlock />
-    <h2>
-      Why We Are Better
-    </h2>
-    <ImageBlock />
   </PageSectionStyle>
 );
 
