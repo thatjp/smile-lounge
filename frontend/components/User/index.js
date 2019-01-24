@@ -10,6 +10,16 @@ query {
       name
       email
       permissions
+      cart {
+        id
+        quantity
+        item {
+          id
+          title
+          description
+          price
+        }
+      }
     }
   }
 `;
