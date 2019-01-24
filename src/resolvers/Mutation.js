@@ -145,9 +145,11 @@ const mutations = {
   },
   async addToCart(parent, args, ctx, info) {
     const { userId } = ctx.request;
-    const [existingCartItem] = ctx.db.query.cartItems({
-      user: { id: userId },
-      item: { id: args.id },
+    const [existingCartItem] = await ctx.db.query.cartItems({
+      where: {
+        user: { id: userId },
+        item: { id: args.id },
+      },
     });
     if (existingCartItem) {
       return ctx.db.mutation.updateCartItem({
