@@ -18,6 +18,9 @@ const Nav = () => (
           <Link href="/cart">
             <a>Cart</a>
           </Link>
+          <Link href="/services">
+            <a>Services</a>
+          </Link>
           <Signout />
         </>
         )}

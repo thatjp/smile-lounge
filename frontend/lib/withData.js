@@ -4,7 +4,6 @@ import { endpoint, prodEndpoint } from '../config';
 import { LOCAL_STATE_QUERY, TOGGLE_CART_MUTATION } from '../components/Cart';
 
 function createClient({ headers }) {
-  console.log(process.env.NODE_ENV);
   return new ApolloClient({
     uri: process.env.NODE_ENV === 'development' ? endpoint : prodEndpoint,
     request: (operation) => {
