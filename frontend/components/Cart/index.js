@@ -4,6 +4,7 @@ import { Query, Mutation } from 'react-apollo';
 import User from '../User';
 import CartItem from '../CartItem';
 import calcTotalPrice from '../../lib/utils';
+import CheckoutWrapper from '../CheckoutWrapper';
 
 const LOCAL_STATE_QUERY = gql`
   query {
@@ -50,12 +51,14 @@ const Cart = () => (
                   <ul>
                     {me.cart.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)}
                   </ul>
-                  
+
                   <footer>
-                    {/* <p>{calcTotalPrice(me.cart)}</p> */}
-                    <button type="submit">
-                    Checkout
-                    </button>
+                    <p>{calcTotalPrice(me.cart)}</p>
+                    <CheckoutWrapper>
+                      <button type="submit">
+                      Checkout
+                      </button>
+                    </CheckoutWrapper>
                   </footer>
                 </div>
               )}
