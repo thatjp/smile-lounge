@@ -24,15 +24,15 @@ const CREATE_ORDER_MUTATION = gql`
 `;
 
 class Checkout extends Component {
-  onToken = (res, createOrder) => {
-    console.log(res);
-    createOrder({
+  onToken = async (res, createOrder) => {
+    const order = await createOrder({
       variables: {
         token: res.id,
       },
     }).catch((err) => {
       alert(err.message);
     });
+    console.log(order);
   }
 
   render() {

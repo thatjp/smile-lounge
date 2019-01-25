@@ -176,7 +176,7 @@ const mutations = {
           id: args.id,
         },
       },
-      `{id, user { id }}`
+      '{id, user { id }}',
     );
     if (!cartItem) throw new Error('No CartItem Found');
     if (cartItem.user.id !== ctx.request.userId) {
@@ -185,8 +185,7 @@ const mutations = {
     return ctx.db.mutation.deleteCartItem({
       where: { id: args.id },
     },
-    info
-    )
+    info,);
   },
   async createOrder(parent, args, ctx, info) {
     const { userId } = ctx.request;
@@ -212,16 +211,43 @@ const mutations = {
       `,
     );
     const amount = user.cart.reduce(
-      (tally, cartItem) => tally + cartItem.item.price * cartItem.quantity, 
+      (tally, cartItem) => tally + cartItem.item.price * cartItem.quantity,
       0,
     );
-    console.log(`charging ${amount}`);
     const charge = await stripe.charges.create({
       amount,
       currency: 'USD',
       source: args.token,
     });
-    console.log(charge);
+    const orderItems = user.cart.map((cartItem) => {
+      const orderItem = {
+        ...cartItem.item,
+        quantity: cartItem.quantity,
+        user: {
+          connect: {
+            id: userId,
+          },
+        },
+      };
+      delete orderItem.id;
+      return orderItem;
+    });
+
+    const order = await ctx.db.mutation.createOrder({
+      data: {
+        total: charge.amount,
+        charge: charge.id,
+        items: { create: orderItems },
+        user: { connect: { id: userId } },
+      },
+    });
+    const cartItemIds = user.cart.map(cartItem => cartItem.id);
+    await ctx.db.mutation.deleteManyCartItems({
+      where: {
+        id_in: cartItemIds,
+      },
+    });
+    return order;
   },
 };
 

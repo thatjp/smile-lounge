@@ -54,11 +54,13 @@ const Cart = () => (
 
                   <footer>
                     <p>{calcTotalPrice(me.cart)}</p>
-                    <CheckoutWrapper>
-                      <button type="submit">
-                      Checkout
-                      </button>
-                    </CheckoutWrapper>
+                    {me.cart.length && (
+                      <CheckoutWrapper>
+                        <button type="submit">
+                        Checkout
+                        </button>
+                      </CheckoutWrapper>
+                    )}
                   </footer>
                 </div>
               )}
