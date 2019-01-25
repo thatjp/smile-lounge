@@ -1,7 +1,7 @@
 # Prod
 # endpoint: ${env:PRISMA_ENDPOINT_PROD}
 # Dev
-endpoint: ${env:PRISMA_ENDPOINT_PROD}
+endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.prisma
 secret: ${env:PRISMA_SECRET}
 hooks:
