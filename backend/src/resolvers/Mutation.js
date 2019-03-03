@@ -152,6 +152,7 @@ const mutations = {
         item: { id: args.id },
       },
     });
+    console.log('existing Cart Item', existingCartItem);
     if (existingCartItem) {
       return ctx.db.mutation.updateCartItem({
         where: { id: existingCartItem.id },
@@ -185,7 +186,7 @@ const mutations = {
     return ctx.db.mutation.deleteCartItem({
       where: { id: args.id },
     },
-    info,);
+    info);
   },
   async createOrder(parent, args, ctx, info) {
     const { userId } = ctx.request;
@@ -210,15 +211,19 @@ const mutations = {
       }
       `,
     );
+    // amount in the cart
     const amount = user.cart.reduce(
       (tally, cartItem) => tally + cartItem.item.price * cartItem.quantity,
       0,
     );
+    // creates the charge
     const charge = await stripe.charges.create({
       amount,
       currency: 'USD',
       source: args.token,
     });
+
+    //
     const orderItems = user.cart.map((cartItem) => {
       const orderItem = {
         ...cartItem.item,
@@ -248,6 +253,43 @@ const mutations = {
       },
     });
     return order;
+  },
+  async createSLSubscription(parent, args, ctx, info) {
+    /*--------------------------------------------------
+      1. is the user logged in
+      2. find the user where id = id
+      3. create a product based
+      4. create a new stripe customer
+      5. create a new subscription with the customer id and plans array
+    --------------------------------------------------*/
+    /*--------------------------------------------------
+    1. user sign in check
+    --------------------------------------------------*/
+    const { userId } = ctx.request;
+    if (!userId) throw new Error('You must be signed in to order');
+    /*--------------------------------------------------
+    2. create a user variable
+    --------------------------------------------------*/
+    const user = await ctx.db.query.user(
+      { where: { id: userId } },
+      `
+      {
+        id
+        name
+        email
+        cart {
+          id
+          quantity
+          item {
+            title
+            price
+            id
+            description
+          }
+        }
+      }
+      `,
+    );
   },
 };
 

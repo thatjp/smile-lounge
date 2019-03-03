@@ -22,9 +22,23 @@ const CREATE_ORDER_MUTATION = gql`
     }
   }
 `;
+const  CREATE_SLSUBSCIPTION_MUTATION = gql`
+  mutation createSLSubscription($token: String!) {
+    createSLSubscription(token: $token) {
+      id
+      charge
+      total
+      items {
+        id
+        title
+      }
+    }
+  }
+`;
 
-class Checkout extends Component {
+class CheckoutWrapper extends Component {
   onToken = async (res, createOrder) => {
+    console.log('ontoken');
     const order = await createOrder({
       variables: {
         token: res.id,
@@ -63,4 +77,4 @@ class Checkout extends Component {
   }
 }
 
-export default Checkout;
+export default CheckoutWrapper;

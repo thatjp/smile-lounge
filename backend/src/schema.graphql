@@ -15,6 +15,7 @@ type Mutation {
   addToCart(id: ID!): CartItem
   removedFromCart(id: ID!): CartItem
   createOrder(token: String!): Order!
+  createSLSubscription(token: String!): SLSubscription!
 }
 
 type Query {
