@@ -1,5 +1,5 @@
-# source: https://us1.prisma.sh/joseph-harris/sl-dev/dev
-# timestamp: Sat Feb 23 2019 16:56:52 GMT-0500 (Eastern Standard Time)
+# source: https://sl-prod-c7fbae30d1.herokuapp.com/sl-prod/prod
+# timestamp: Sat Feb 23 2019 16:59:40 GMT-0500 (Eastern Standard Time)
 
 type AggregateCartItem {
   count: Int!
@@ -221,7 +221,6 @@ input CartItemUpdateManyMutationInput {
 input CartItemUpdateManyWithoutUserInput {
   create: [CartItemCreateWithoutUserInput!]
   connect: [CartItemWhereUniqueInput!]
-  set: [CartItemWhereUniqueInput!]
   disconnect: [CartItemWhereUniqueInput!]
   delete: [CartItemWhereUniqueInput!]
   update: [CartItemUpdateWithWhereUniqueWithoutUserInput!]
@@ -1119,7 +1118,6 @@ input OrderItemUpdateManyDataInput {
 input OrderItemUpdateManyInput {
   create: [OrderItemCreateInput!]
   connect: [OrderItemWhereUniqueInput!]
-  set: [OrderItemWhereUniqueInput!]
   disconnect: [OrderItemWhereUniqueInput!]
   delete: [OrderItemWhereUniqueInput!]
   update: [OrderItemUpdateWithWhereUniqueNestedInput!]
@@ -1916,7 +1914,6 @@ input SLSubscriptionItemUpdateManyDataInput {
 input SLSubscriptionItemUpdateManyInput {
   create: [SLSubscriptionItemCreateInput!]
   connect: [SLSubscriptionItemWhereUniqueInput!]
-  set: [SLSubscriptionItemWhereUniqueInput!]
   disconnect: [SLSubscriptionItemWhereUniqueInput!]
   delete: [SLSubscriptionItemWhereUniqueInput!]
   update: [SLSubscriptionItemUpdateWithWhereUniqueNestedInput!]
