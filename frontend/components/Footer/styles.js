@@ -4,7 +4,7 @@ const FooterStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border-top: 1px solid ${props => props.theme.lightgrey};
+  background-color: ${props => props.theme.peach};
   height: 300px;
   padding:0px 50px;
   @media (max-width: 700px) {

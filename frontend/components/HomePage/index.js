@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PageSection from '../PageSection';
-import BannerContainer from '../BannerContainer';
+import BannerContainer from '../BannerContainer/BannerContainer';
 import { HomePageStyles, HomePageInnerStyle } from './styles';
 
 class HomePage extends Component {

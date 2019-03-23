@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
-const NavStyles = styled.ul`
+const NavStyles = styled.div`
   margin: 0;
   padding: 0;
   display: flex;
   justify-self: end;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  max-width: 200px;
   a,
   button {
-    padding: 2rem .5rem;
+    padding: 2rem 3rem;
     display: flex;
     align-items: right;
     position: relative;

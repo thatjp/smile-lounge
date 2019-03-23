@@ -3,11 +3,11 @@ import styled from 'styled-components';
 const BannerContainerStyles = styled.div`
   position: relative;
   display: inline-block;
-  .container{
+  .container {
     position: relative;
     text-align: center;
   }
-  img{
+  img {
     display: block;
     width: 100%;
   }
