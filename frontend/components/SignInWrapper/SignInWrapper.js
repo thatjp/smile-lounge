@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Query } from 'react-apollo';
-import { CURRENT_USER_QUERY } from '../User';
-import Signin from '../Signin';
+import { CURRENT_USER_QUERY } from '../User/User';
+import Signin from '../Signin/Signin';
 import Columns from './styles';
 
 const SignInWrapper = props => (

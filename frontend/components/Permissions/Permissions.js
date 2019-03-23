@@ -1,9 +1,10 @@
+
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import Error from '../ErrorMessage';
-import TableUser from '../TableUser';
+import Error from '../ErrorMessage/ErrorMessage';
+import TableUser from '../TableUser/TableUser';
 
 const possiblePermissions = [
   'ADMIN',

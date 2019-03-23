@@ -1,10 +1,10 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
-import User from '../User';
-import CartItem from '../CartItem';
+import User from '../User/User';
+import CartItem from '../CartItem/CartItem';
 import calcTotalPrice from '../../lib/utils';
-import CheckoutWrapper from '../CheckoutWrapper';
+import CheckoutWrapper from '../CheckoutWrapper/CheckoutWrapper';
 
 const LOCAL_STATE_QUERY = gql`
   query {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Permissions from '../components/Permissions';
-import SignInWrapper from '../components/SignInWrapper';
+import Permissions from '../components/Permissions/Permissions';
+import SignInWrapper from '../components/SignInWrapper/SignInWrapper';
 
 const PermissionsPage = () => (
   <SignInWrapper>

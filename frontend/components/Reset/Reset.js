@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
-import Error from '../ErrorMessage';
-import { CURRENT_USER_QUERY } from '../User';
+import Error from '../ErrorMessage/ErrorMessage';
+import { CURRENT_USER_QUERY } from '../User/User';
 import Form from '../styles/Form';
 
 const REQUEST_RESET_MUTATION = gql`

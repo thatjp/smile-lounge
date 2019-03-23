@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import { Mutation } from 'react-apollo';
@@ -5,8 +6,8 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
-import Error from '../ErrorMessage';
-import User, { CURRENT_USER_QUERY } from '../User';
+import Error from '../ErrorMessage/ErrorMessage';
+import User, { CURRENT_USER_QUERY } from '../User/User';
 import calcTotalPrice from '../../lib/utils';
 
 const CREATE_ORDER_MUTATION = gql`

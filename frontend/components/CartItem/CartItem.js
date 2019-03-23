@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RemovedFromCart from '../RemoveFromCart';
+import RemovedFromCart from '../RemoveFromCart/RemoveFromCart';
 
 const CartItem = props => (
   <div>

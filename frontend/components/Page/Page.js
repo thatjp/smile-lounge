@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
-import Header from '../Header';
-import Meta from '../Meta';
-import Footer from '../Footer';
+import Header from '../Header/Header';
+import Meta from '../Meta/Meta';
+import Footer from '../Footer/Footer';
 import {
   theme,
   StyledPage,

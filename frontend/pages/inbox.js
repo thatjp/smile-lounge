@@ -1,4 +1,4 @@
-import Inbox from '../components/Inbox';
+import Inbox from '../components/Inbox/Inbox';
 
 const InboxPage = () => (
   <div>

@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import HeaderStyles from './styles';
-import Nav from '../Nav';
-import Nav2 from '../Nav2';
+import Nav from '../Nav/Nav';
+import Nav2 from '../Nav2/Nav2';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();

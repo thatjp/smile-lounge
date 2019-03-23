@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PageSection from '../PageSection';
+import PageSection from '../PageSection/PageSection';
 import BannerContainer from '../BannerContainer/BannerContainer';
 import { HomePageStyles, HomePageInnerStyle } from './styles';
 

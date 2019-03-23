@@ -1,6 +1,6 @@
 import React from 'react';
 import SettingsStyles from './styles';
-import Reset from '../Reset';
+import Reset from '../Reset/Reset';
 
 const Settings = () => (
   <SettingsStyles>

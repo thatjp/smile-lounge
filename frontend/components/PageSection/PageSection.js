@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageBlock from '../ImageBlock';
+import ImageBlock from '../ImageBlock/ImageBlock';
 import PageSectionStyle from './styles';
 
 const PageSection = () => (

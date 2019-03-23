@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Signin from '../components/Signin';
+import Signin from '../components/Signin/Signin';
 
 const Columns = styled.div`
   display: flex;

@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
-import Error from '../ErrorMessage';
+import Error from '../ErrorMessage/ErrorMessage';
+import { CURRENT_USER_QUERY } from '../User/User';
 import Form from '../styles/Form';
 
-const REQUEST_RESET_MUTATION = gql`
-  mutation REQUEST_RESET_MUTATION(
-    $email: String!
-) {
-    requestReset(email: $email) {
-      message
+const SIGNIN_MUTATION = gql`
+  mutation SIGNIN_MUTATION(
+    $email: String!, $password: String!
+  ) {
+    signin(email: $email, password: $password) {
+      id
+      email
     }
   }
 `;
 
-class RequestReset extends Component {
+class Signin extends Component {
   state={
     email: '',
+    password: '',
   };
 
   saveToState = (e) => {
@@ -29,16 +32,18 @@ class RequestReset extends Component {
   render() {
     return (
       <Mutation
-        mutation={REQUEST_RESET_MUTATION}
+        mutation={SIGNIN_MUTATION}
         variables={this.state}
+        refetchQueries={[{ query: CURRENT_USER_QUERY }]}
       >
-        { (reset, { error, loading, called }) => (
+        { (signin, { error, loading }) => (
           <Form
             method="post"
             onSubmit={async (e) => {
               e.preventDefault();
-              const res = await reset();
+              const res = await signin();
               this.setState({
+                password: '',
                 email: '',
               });
             }}
@@ -47,9 +52,8 @@ class RequestReset extends Component {
               disabled={loading}
               aria-busy={loading}
             >
-              <h2>Request Password Reset</h2>
+              <h2>Sign In</h2>
               <Error error={error} />
-              {!error && !loading && called && <p>Success! Check your email fro a reset link!</p>}
               <label htmlFor="email">
                 Email
                 <input
@@ -60,7 +64,19 @@ class RequestReset extends Component {
                   onChange={this.saveToState}
                 />
               </label>
-              <button type="submit">Request Reset</button>
+              <label
+                htmlFor="password"
+              >
+                Password
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  value={this.state.password}
+                  onChange={this.saveToState}
+                />
+              </label>
+              <button type="submit">Sign In</button>
             </fieldset>
           </Form>)
         }
@@ -69,4 +85,4 @@ class RequestReset extends Component {
   }
 }
 
-export default RequestReset;
+export default Signin;

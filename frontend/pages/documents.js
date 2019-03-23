@@ -1,4 +1,4 @@
-import Documents from '../components/Documents';
+import Documents from '../components/Documents/Documents';
 
 const DocumentsPage = () => (
   <div>

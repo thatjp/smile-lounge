@@ -1,4 +1,4 @@
-import Hooks from '../components/Hooks';
+import Hooks from '../components/Hooks/Hooks';
 
 const HooksPage = () => (
   <div>
