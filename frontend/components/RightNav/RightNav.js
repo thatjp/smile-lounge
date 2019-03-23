@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import NavStyle from './styles';
+import RightNavStyles from './styles';
 import User from '../User/User';
 import Signout from '../Signout/Signout';
 
@@ -9,7 +9,7 @@ import Signout from '../Signout/Signout';
 const Nav = () => (
   <User>
     {({ data: { me } }) => (
-      <NavStyle>
+      <RightNavStyles>
         {me && (
         <>
           <Link href="/profile">
@@ -34,7 +34,7 @@ const Nav = () => (
             </Link>
           </>
         )}
-      </NavStyle>
+      </RightNavStyles>
     )}
   </User>
 );

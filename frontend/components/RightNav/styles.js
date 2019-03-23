@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const NavStyles = styled.ul`
+const RightNavStyles = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
@@ -29,4 +29,4 @@ const NavStyles = styled.ul`
   }
 `;
 
-export default NavStyles;
+export default RightNavStyles;

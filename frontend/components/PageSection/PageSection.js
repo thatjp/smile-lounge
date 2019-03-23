@@ -1,14 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ImageBlock from '../ImageBlock/ImageBlock';
 import PageSectionStyle from './styles';
 
-const PageSection = () => (
+const PageSection = ({ title, body, ...props }) => (
   <PageSectionStyle>
     <h2>
-      How It Works
+      {title}
     </h2>
-    <ImageBlock />
+    <p>{body}</p>
   </PageSectionStyle>
 );
+
+PageSection.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string,
+};
+
+PageSection.defaultProps = {
+  title: '',
+  body: '',
+};
 
 export default PageSection;

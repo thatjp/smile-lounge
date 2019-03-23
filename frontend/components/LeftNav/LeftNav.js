@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import NavStyle from './styles';
+import LeftNavStyles from './styles';
 
 
 const Nav = () => (
-  <NavStyle>
+  <LeftNavStyles>
     <Link href="/faq">
       <a>Learn</a>
     </Link>
@@ -15,7 +15,7 @@ const Nav = () => (
     <Link href="/about">
       <a>About</a>
     </Link>
-  </NavStyle>
+  </LeftNavStyles>
 );
 
 export default Nav;

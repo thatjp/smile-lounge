@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import HeaderStyles from './styles';
-import Nav from '../Nav/Nav';
-import Nav2 from '../Nav2/Nav2';
+import RightNav from '../RightNav/RightNav';
+import LeftNav from '../LeftNav/LeftNav';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -21,7 +21,7 @@ const Header = () => (
   <div className="bar">
     <HeaderStyles>
       <div className="navigation">
-        <Nav2 />
+        <LeftNav />
       </div>
       <Link href="/">
         <a>
@@ -29,7 +29,7 @@ const Header = () => (
         </a>
       </Link>
       <div className="navigation">
-        <Nav />
+        <RightNav />
       </div>
     </HeaderStyles>
   </div>
