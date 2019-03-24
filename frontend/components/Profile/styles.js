@@ -15,7 +15,7 @@ const ProfileStyles = styled.div`
     padding: 30px;
     margin: 30px;
     text-align: center;
-    border: 1px solid ${props => props.theme.lightgrey}
+    border: 1px solid ${props => props.theme.black}
   }
 
   .link .two{
