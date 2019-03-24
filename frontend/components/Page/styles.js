@@ -16,17 +16,20 @@ const theme = {
 
 const StyledPage = styled.div`
   height: 100%;
-  position: relative;
+  /* position: relative; */
   color: ${props => props.theme.black};
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
+  /* .footer {
+    flex-shrink: 0;
+  } */
 `;
 
 const Inner = styled.div`
   background: ${props => props.theme.peach};
   padding: 100px 0px;
   height: 100%;
-  min-height: 100%;
   /* flex: 1 0 auto; */
+  /* min-height: 100%; */
 `;
 
 const Banner = styled.div`
