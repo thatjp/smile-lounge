@@ -18,10 +18,15 @@ const StyledPage = styled.div`
   height: 100%;
   position: relative;
   color: ${props => props.theme.black};
+  flex: 1 0 auto;
 `;
 
 const Inner = styled.div`
   background: ${props => props.theme.peach};
+  padding: 100px 0px;
+  height: 100%;
+  min-height: 100%;
+  /* flex: 1 0 auto; */
 `;
 
 const Banner = styled.div`
@@ -72,6 +77,8 @@ injectGlobal`
     font-size: 1.5rem;
     line-height: 2;
     font-family: 'WorkSans-Regular';
+    display: flex;
+    flex-direction: column;
   }
   a {    
     text-decoration: none;
