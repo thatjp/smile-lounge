@@ -12,6 +12,8 @@ const HomePage = () => (
       {pageSectionsText.map(pageSection => (
         <PageSection
           key={pageSection.id}
+          color={pageSection.backgroundColor}
+          textColor={pageSection.textColor}
           type={pageSection.type}
           title={pageSection.title}
           body={pageSection.body}

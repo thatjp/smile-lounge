@@ -1,6 +1,8 @@
 import React from 'react';
-import BannerContainerStyles from './styles';
+import Link from 'next/link';
 import TextBlock from '../TextBlock/TextBlock';
+import Button from '../Button/Button';
+import BannerContainerStyles from './styles';
 
 const title = 'Give your smile the concierge treatment';
 

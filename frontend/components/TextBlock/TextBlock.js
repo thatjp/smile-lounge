@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import TextBlockStyle from './styles';
-import Button from '../Button/Button.js';
+import Button from '../Button/Button';
 
 const TextBlock = ({ title, body }) => (
   <TextBlockStyle>

@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 const BannerContainerStyles = styled.div`
   position: relative;
-  display: inline-block;
+  border-bottom: solid 2px ${props => props.theme.black};
   .container {
     position: relative;
     text-align: center;
   }
   img {
     display: block;
-    width: 100%;
+    width: 80%;
   }
 `;
 

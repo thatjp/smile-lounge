@@ -4,9 +4,12 @@ const theme = {
   red: '#ff0000',
   black: '#393939',
   grey: '#3A3A3A',
-  peach: '#DAB18E',
+  peach: '#FFD7B9',
+  coral: '#C3FFCC',
+  offWhite: '#F3FFF9',
+  aqua: '#C5FFFD',
   lightgrey: '#E1E1E1',
-  offwhite: '#EDEDED',
+  darkGreen: '#093d31',
   maxWidth: '100%',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
@@ -18,14 +21,11 @@ const StyledPage = styled.div`
 `;
 
 const Inner = styled.div`
-  /* max-width: ${props => props.homepage || props.theme.maxWidth}; */
-  /* margin: 0 10%; */
   background: ${props => props.theme.peach};
 `;
 
 const Banner = styled.div`
   max-width: 100%;
-  /* margin: 0 auto; */
 `;
 
 // eslint-disable-next-line no-unused-expressions
@@ -79,6 +79,13 @@ injectGlobal`
   }
   ul {
     list-style-type: none;
+    margin: none;
+  }
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
   }
 `;
 
