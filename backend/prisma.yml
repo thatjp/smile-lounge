@@ -3,7 +3,7 @@
 # Dev
 endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.prisma
-secret: ${env:PRISMA_SECRET}
+secret: jwtsecret123
 hooks:
   post-deploy:
     - graphql get-schema -p prisma

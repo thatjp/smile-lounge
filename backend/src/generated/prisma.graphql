@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/joseph-harris/sl-dev/dev
-# timestamp: Sat Feb 23 2019 16:56:52 GMT-0500 (Eastern Standard Time)
+# timestamp: Wed Apr 03 2019 19:33:42 GMT-0400 (Eastern Daylight Time)
 
 type AggregateCartItem {
   count: Int!
@@ -14,14 +14,6 @@ type AggregateOrder {
 }
 
 type AggregateOrderItem {
-  count: Int!
-}
-
-type AggregateSLSubscription {
-  count: Int!
-}
-
-type AggregateSLSubscriptionItem {
   count: Int!
 }
 
@@ -52,6 +44,7 @@ type CartItemConnection {
 }
 
 input CartItemCreateInput {
+  id: ID
   quantity: Int
   item: ItemCreateOneInput!
   user: UserCreateOneWithoutCartInput
@@ -63,6 +56,7 @@ input CartItemCreateManyWithoutUserInput {
 }
 
 input CartItemCreateWithoutUserInput {
+  id: ID
   quantity: Int
   item: ItemCreateOneInput!
 }
@@ -351,6 +345,7 @@ type ItemConnection {
 }
 
 input ItemCreateInput {
+  id: ID
   title: String!
   description: String!
   image: String
@@ -725,46 +720,34 @@ scalar Long
 type Mutation {
   createCartItem(data: CartItemCreateInput!): CartItem!
   createOrder(data: OrderCreateInput!): Order!
-  createSLSubscription(data: SLSubscriptionCreateInput!): SLSubscription!
   createItem(data: ItemCreateInput!): Item!
   createOrderItem(data: OrderItemCreateInput!): OrderItem!
   createUser(data: UserCreateInput!): User!
-  createSLSubscriptionItem(data: SLSubscriptionItemCreateInput!): SLSubscriptionItem!
   updateCartItem(data: CartItemUpdateInput!, where: CartItemWhereUniqueInput!): CartItem
   updateOrder(data: OrderUpdateInput!, where: OrderWhereUniqueInput!): Order
-  updateSLSubscription(data: SLSubscriptionUpdateInput!, where: SLSubscriptionWhereUniqueInput!): SLSubscription
   updateItem(data: ItemUpdateInput!, where: ItemWhereUniqueInput!): Item
   updateOrderItem(data: OrderItemUpdateInput!, where: OrderItemWhereUniqueInput!): OrderItem
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
-  updateSLSubscriptionItem(data: SLSubscriptionItemUpdateInput!, where: SLSubscriptionItemWhereUniqueInput!): SLSubscriptionItem
   deleteCartItem(where: CartItemWhereUniqueInput!): CartItem
   deleteOrder(where: OrderWhereUniqueInput!): Order
-  deleteSLSubscription(where: SLSubscriptionWhereUniqueInput!): SLSubscription
   deleteItem(where: ItemWhereUniqueInput!): Item
   deleteOrderItem(where: OrderItemWhereUniqueInput!): OrderItem
   deleteUser(where: UserWhereUniqueInput!): User
-  deleteSLSubscriptionItem(where: SLSubscriptionItemWhereUniqueInput!): SLSubscriptionItem
   upsertCartItem(where: CartItemWhereUniqueInput!, create: CartItemCreateInput!, update: CartItemUpdateInput!): CartItem!
   upsertOrder(where: OrderWhereUniqueInput!, create: OrderCreateInput!, update: OrderUpdateInput!): Order!
-  upsertSLSubscription(where: SLSubscriptionWhereUniqueInput!, create: SLSubscriptionCreateInput!, update: SLSubscriptionUpdateInput!): SLSubscription!
   upsertItem(where: ItemWhereUniqueInput!, create: ItemCreateInput!, update: ItemUpdateInput!): Item!
   upsertOrderItem(where: OrderItemWhereUniqueInput!, create: OrderItemCreateInput!, update: OrderItemUpdateInput!): OrderItem!
   upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
-  upsertSLSubscriptionItem(where: SLSubscriptionItemWhereUniqueInput!, create: SLSubscriptionItemCreateInput!, update: SLSubscriptionItemUpdateInput!): SLSubscriptionItem!
   updateManyCartItems(data: CartItemUpdateManyMutationInput!, where: CartItemWhereInput): BatchPayload!
   updateManyOrders(data: OrderUpdateManyMutationInput!, where: OrderWhereInput): BatchPayload!
-  updateManySLSubscriptions(data: SLSubscriptionUpdateManyMutationInput!, where: SLSubscriptionWhereInput): BatchPayload!
   updateManyItems(data: ItemUpdateManyMutationInput!, where: ItemWhereInput): BatchPayload!
   updateManyOrderItems(data: OrderItemUpdateManyMutationInput!, where: OrderItemWhereInput): BatchPayload!
   updateManyUsers(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
-  updateManySLSubscriptionItems(data: SLSubscriptionItemUpdateManyMutationInput!, where: SLSubscriptionItemWhereInput): BatchPayload!
   deleteManyCartItems(where: CartItemWhereInput): BatchPayload!
   deleteManyOrders(where: OrderWhereInput): BatchPayload!
-  deleteManySLSubscriptions(where: SLSubscriptionWhereInput): BatchPayload!
   deleteManyItems(where: ItemWhereInput): BatchPayload!
   deleteManyOrderItems(where: OrderItemWhereInput): BatchPayload!
   deleteManyUsers(where: UserWhereInput): BatchPayload!
-  deleteManySLSubscriptionItems(where: SLSubscriptionItemWhereInput): BatchPayload!
 }
 
 enum MutationType {
@@ -798,6 +781,7 @@ type OrderConnection {
 }
 
 input OrderCreateInput {
+  id: ID
   total: Int!
   charge: String!
   items: OrderItemCreateManyInput
@@ -833,6 +817,7 @@ type OrderItemConnection {
 }
 
 input OrderItemCreateInput {
+  id: ID
   title: String!
   description: String!
   price: Int!
@@ -1549,25 +1534,19 @@ enum Permission {
 type Query {
   cartItems(where: CartItemWhereInput, orderBy: CartItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [CartItem]!
   orders(where: OrderWhereInput, orderBy: OrderOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Order]!
-  sLSubscriptions(where: SLSubscriptionWhereInput, orderBy: SLSubscriptionOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SLSubscription]!
   items(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Item]!
   orderItems(where: OrderItemWhereInput, orderBy: OrderItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [OrderItem]!
   users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
-  sLSubscriptionItems(where: SLSubscriptionItemWhereInput, orderBy: SLSubscriptionItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SLSubscriptionItem]!
   cartItem(where: CartItemWhereUniqueInput!): CartItem
   order(where: OrderWhereUniqueInput!): Order
-  sLSubscription(where: SLSubscriptionWhereUniqueInput!): SLSubscription
   item(where: ItemWhereUniqueInput!): Item
   orderItem(where: OrderItemWhereUniqueInput!): OrderItem
   user(where: UserWhereUniqueInput!): User
-  sLSubscriptionItem(where: SLSubscriptionItemWhereUniqueInput!): SLSubscriptionItem
   cartItemsConnection(where: CartItemWhereInput, orderBy: CartItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CartItemConnection!
   ordersConnection(where: OrderWhereInput, orderBy: OrderOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): OrderConnection!
-  sLSubscriptionsConnection(where: SLSubscriptionWhereInput, orderBy: SLSubscriptionOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SLSubscriptionConnection!
   itemsConnection(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ItemConnection!
   orderItemsConnection(where: OrderItemWhereInput, orderBy: OrderItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): OrderItemConnection!
   usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
-  sLSubscriptionItemsConnection(where: SLSubscriptionItemWhereInput, orderBy: SLSubscriptionItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SLSubscriptionItemConnection!
 
   """Fetches an object given its ID"""
   node(
@@ -1576,757 +1555,12 @@ type Query {
   ): Node
 }
 
-type SLSubscription implements Node {
-  id: ID!
-  items(where: SLSubscriptionItemWhereInput, orderBy: SLSubscriptionItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SLSubscriptionItem!]
-  total: Int!
-  user: User!
-  charge: String!
-}
-
-"""A connection to a list of items."""
-type SLSubscriptionConnection {
-  """Information to aid in pagination."""
-  pageInfo: PageInfo!
-
-  """A list of edges."""
-  edges: [SLSubscriptionEdge]!
-  aggregate: AggregateSLSubscription!
-}
-
-input SLSubscriptionCreateInput {
-  total: Int!
-  charge: String!
-  items: SLSubscriptionItemCreateManyInput
-  user: UserCreateOneInput!
-}
-
-"""An edge in a connection."""
-type SLSubscriptionEdge {
-  """The item at the end of the edge."""
-  node: SLSubscription!
-
-  """A cursor for use in pagination."""
-  cursor: String!
-}
-
-type SLSubscriptionItem implements Node {
-  id: ID!
-  title: String!
-  description: String!
-  price: Int!
-  plan: Int!
-  user: User
-}
-
-"""A connection to a list of items."""
-type SLSubscriptionItemConnection {
-  """Information to aid in pagination."""
-  pageInfo: PageInfo!
-
-  """A list of edges."""
-  edges: [SLSubscriptionItemEdge]!
-  aggregate: AggregateSLSubscriptionItem!
-}
-
-input SLSubscriptionItemCreateInput {
-  title: String!
-  description: String!
-  price: Int!
-  plan: Int
-  user: UserCreateOneInput
-}
-
-input SLSubscriptionItemCreateManyInput {
-  create: [SLSubscriptionItemCreateInput!]
-  connect: [SLSubscriptionItemWhereUniqueInput!]
-}
-
-"""An edge in a connection."""
-type SLSubscriptionItemEdge {
-  """The item at the end of the edge."""
-  node: SLSubscriptionItem!
-
-  """A cursor for use in pagination."""
-  cursor: String!
-}
-
-enum SLSubscriptionItemOrderByInput {
-  id_ASC
-  id_DESC
-  title_ASC
-  title_DESC
-  description_ASC
-  description_DESC
-  price_ASC
-  price_DESC
-  plan_ASC
-  plan_DESC
-  updatedAt_ASC
-  updatedAt_DESC
-  createdAt_ASC
-  createdAt_DESC
-}
-
-type SLSubscriptionItemPreviousValues {
-  id: ID!
-  title: String!
-  description: String!
-  price: Int!
-  plan: Int!
-}
-
-input SLSubscriptionItemScalarWhereInput {
-  """Logical AND on all given filters."""
-  AND: [SLSubscriptionItemScalarWhereInput!]
-
-  """Logical OR on all given filters."""
-  OR: [SLSubscriptionItemScalarWhereInput!]
-
-  """Logical NOT on all given filters combined by AND."""
-  NOT: [SLSubscriptionItemScalarWhereInput!]
-  id: ID
-
-  """All values that are not equal to given value."""
-  id_not: ID
-
-  """All values that are contained in given list."""
-  id_in: [ID!]
-
-  """All values that are not contained in given list."""
-  id_not_in: [ID!]
-
-  """All values less than the given value."""
-  id_lt: ID
-
-  """All values less than or equal the given value."""
-  id_lte: ID
-
-  """All values greater than the given value."""
-  id_gt: ID
-
-  """All values greater than or equal the given value."""
-  id_gte: ID
-
-  """All values containing the given string."""
-  id_contains: ID
-
-  """All values not containing the given string."""
-  id_not_contains: ID
-
-  """All values starting with the given string."""
-  id_starts_with: ID
-
-  """All values not starting with the given string."""
-  id_not_starts_with: ID
-
-  """All values ending with the given string."""
-  id_ends_with: ID
-
-  """All values not ending with the given string."""
-  id_not_ends_with: ID
-  title: String
-
-  """All values that are not equal to given value."""
-  title_not: String
-
-  """All values that are contained in given list."""
-  title_in: [String!]
-
-  """All values that are not contained in given list."""
-  title_not_in: [String!]
-
-  """All values less than the given value."""
-  title_lt: String
-
-  """All values less than or equal the given value."""
-  title_lte: String
-
-  """All values greater than the given value."""
-  title_gt: String
-
-  """All values greater than or equal the given value."""
-  title_gte: String
-
-  """All values containing the given string."""
-  title_contains: String
-
-  """All values not containing the given string."""
-  title_not_contains: String
-
-  """All values starting with the given string."""
-  title_starts_with: String
-
-  """All values not starting with the given string."""
-  title_not_starts_with: String
-
-  """All values ending with the given string."""
-  title_ends_with: String
-
-  """All values not ending with the given string."""
-  title_not_ends_with: String
-  description: String
-
-  """All values that are not equal to given value."""
-  description_not: String
-
-  """All values that are contained in given list."""
-  description_in: [String!]
-
-  """All values that are not contained in given list."""
-  description_not_in: [String!]
-
-  """All values less than the given value."""
-  description_lt: String
-
-  """All values less than or equal the given value."""
-  description_lte: String
-
-  """All values greater than the given value."""
-  description_gt: String
-
-  """All values greater than or equal the given value."""
-  description_gte: String
-
-  """All values containing the given string."""
-  description_contains: String
-
-  """All values not containing the given string."""
-  description_not_contains: String
-
-  """All values starting with the given string."""
-  description_starts_with: String
-
-  """All values not starting with the given string."""
-  description_not_starts_with: String
-
-  """All values ending with the given string."""
-  description_ends_with: String
-
-  """All values not ending with the given string."""
-  description_not_ends_with: String
-  price: Int
-
-  """All values that are not equal to given value."""
-  price_not: Int
-
-  """All values that are contained in given list."""
-  price_in: [Int!]
-
-  """All values that are not contained in given list."""
-  price_not_in: [Int!]
-
-  """All values less than the given value."""
-  price_lt: Int
-
-  """All values less than or equal the given value."""
-  price_lte: Int
-
-  """All values greater than the given value."""
-  price_gt: Int
-
-  """All values greater than or equal the given value."""
-  price_gte: Int
-  plan: Int
-
-  """All values that are not equal to given value."""
-  plan_not: Int
-
-  """All values that are contained in given list."""
-  plan_in: [Int!]
-
-  """All values that are not contained in given list."""
-  plan_not_in: [Int!]
-
-  """All values less than the given value."""
-  plan_lt: Int
-
-  """All values less than or equal the given value."""
-  plan_lte: Int
-
-  """All values greater than the given value."""
-  plan_gt: Int
-
-  """All values greater than or equal the given value."""
-  plan_gte: Int
-}
-
-type SLSubscriptionItemSubscriptionPayload {
-  mutation: MutationType!
-  node: SLSubscriptionItem
-  updatedFields: [String!]
-  previousValues: SLSubscriptionItemPreviousValues
-}
-
-input SLSubscriptionItemSubscriptionWhereInput {
-  """Logical AND on all given filters."""
-  AND: [SLSubscriptionItemSubscriptionWhereInput!]
-
-  """Logical OR on all given filters."""
-  OR: [SLSubscriptionItemSubscriptionWhereInput!]
-
-  """Logical NOT on all given filters combined by AND."""
-  NOT: [SLSubscriptionItemSubscriptionWhereInput!]
-
-  """
-  The subscription event gets dispatched when it's listed in mutation_in
-  """
-  mutation_in: [MutationType!]
-
-  """
-  The subscription event gets only dispatched when one of the updated fields names is included in this list
-  """
-  updatedFields_contains: String
-
-  """
-  The subscription event gets only dispatched when all of the field names included in this list have been updated
-  """
-  updatedFields_contains_every: [String!]
-
-  """
-  The subscription event gets only dispatched when some of the field names included in this list have been updated
-  """
-  updatedFields_contains_some: [String!]
-  node: SLSubscriptionItemWhereInput
-}
-
-input SLSubscriptionItemUpdateDataInput {
-  title: String
-  description: String
-  price: Int
-  plan: Int
-  user: UserUpdateOneInput
-}
-
-input SLSubscriptionItemUpdateInput {
-  title: String
-  description: String
-  price: Int
-  plan: Int
-  user: UserUpdateOneInput
-}
-
-input SLSubscriptionItemUpdateManyDataInput {
-  title: String
-  description: String
-  price: Int
-  plan: Int
-}
-
-input SLSubscriptionItemUpdateManyInput {
-  create: [SLSubscriptionItemCreateInput!]
-  connect: [SLSubscriptionItemWhereUniqueInput!]
-  set: [SLSubscriptionItemWhereUniqueInput!]
-  disconnect: [SLSubscriptionItemWhereUniqueInput!]
-  delete: [SLSubscriptionItemWhereUniqueInput!]
-  update: [SLSubscriptionItemUpdateWithWhereUniqueNestedInput!]
-  updateMany: [SLSubscriptionItemUpdateManyWithWhereNestedInput!]
-  deleteMany: [SLSubscriptionItemScalarWhereInput!]
-  upsert: [SLSubscriptionItemUpsertWithWhereUniqueNestedInput!]
-}
-
-input SLSubscriptionItemUpdateManyMutationInput {
-  title: String
-  description: String
-  price: Int
-  plan: Int
-}
-
-input SLSubscriptionItemUpdateManyWithWhereNestedInput {
-  where: SLSubscriptionItemScalarWhereInput!
-  data: SLSubscriptionItemUpdateManyDataInput!
-}
-
-input SLSubscriptionItemUpdateWithWhereUniqueNestedInput {
-  where: SLSubscriptionItemWhereUniqueInput!
-  data: SLSubscriptionItemUpdateDataInput!
-}
-
-input SLSubscriptionItemUpsertWithWhereUniqueNestedInput {
-  where: SLSubscriptionItemWhereUniqueInput!
-  update: SLSubscriptionItemUpdateDataInput!
-  create: SLSubscriptionItemCreateInput!
-}
-
-input SLSubscriptionItemWhereInput {
-  """Logical AND on all given filters."""
-  AND: [SLSubscriptionItemWhereInput!]
-
-  """Logical OR on all given filters."""
-  OR: [SLSubscriptionItemWhereInput!]
-
-  """Logical NOT on all given filters combined by AND."""
-  NOT: [SLSubscriptionItemWhereInput!]
-  id: ID
-
-  """All values that are not equal to given value."""
-  id_not: ID
-
-  """All values that are contained in given list."""
-  id_in: [ID!]
-
-  """All values that are not contained in given list."""
-  id_not_in: [ID!]
-
-  """All values less than the given value."""
-  id_lt: ID
-
-  """All values less than or equal the given value."""
-  id_lte: ID
-
-  """All values greater than the given value."""
-  id_gt: ID
-
-  """All values greater than or equal the given value."""
-  id_gte: ID
-
-  """All values containing the given string."""
-  id_contains: ID
-
-  """All values not containing the given string."""
-  id_not_contains: ID
-
-  """All values starting with the given string."""
-  id_starts_with: ID
-
-  """All values not starting with the given string."""
-  id_not_starts_with: ID
-
-  """All values ending with the given string."""
-  id_ends_with: ID
-
-  """All values not ending with the given string."""
-  id_not_ends_with: ID
-  title: String
-
-  """All values that are not equal to given value."""
-  title_not: String
-
-  """All values that are contained in given list."""
-  title_in: [String!]
-
-  """All values that are not contained in given list."""
-  title_not_in: [String!]
-
-  """All values less than the given value."""
-  title_lt: String
-
-  """All values less than or equal the given value."""
-  title_lte: String
-
-  """All values greater than the given value."""
-  title_gt: String
-
-  """All values greater than or equal the given value."""
-  title_gte: String
-
-  """All values containing the given string."""
-  title_contains: String
-
-  """All values not containing the given string."""
-  title_not_contains: String
-
-  """All values starting with the given string."""
-  title_starts_with: String
-
-  """All values not starting with the given string."""
-  title_not_starts_with: String
-
-  """All values ending with the given string."""
-  title_ends_with: String
-
-  """All values not ending with the given string."""
-  title_not_ends_with: String
-  description: String
-
-  """All values that are not equal to given value."""
-  description_not: String
-
-  """All values that are contained in given list."""
-  description_in: [String!]
-
-  """All values that are not contained in given list."""
-  description_not_in: [String!]
-
-  """All values less than the given value."""
-  description_lt: String
-
-  """All values less than or equal the given value."""
-  description_lte: String
-
-  """All values greater than the given value."""
-  description_gt: String
-
-  """All values greater than or equal the given value."""
-  description_gte: String
-
-  """All values containing the given string."""
-  description_contains: String
-
-  """All values not containing the given string."""
-  description_not_contains: String
-
-  """All values starting with the given string."""
-  description_starts_with: String
-
-  """All values not starting with the given string."""
-  description_not_starts_with: String
-
-  """All values ending with the given string."""
-  description_ends_with: String
-
-  """All values not ending with the given string."""
-  description_not_ends_with: String
-  price: Int
-
-  """All values that are not equal to given value."""
-  price_not: Int
-
-  """All values that are contained in given list."""
-  price_in: [Int!]
-
-  """All values that are not contained in given list."""
-  price_not_in: [Int!]
-
-  """All values less than the given value."""
-  price_lt: Int
-
-  """All values less than or equal the given value."""
-  price_lte: Int
-
-  """All values greater than the given value."""
-  price_gt: Int
-
-  """All values greater than or equal the given value."""
-  price_gte: Int
-  plan: Int
-
-  """All values that are not equal to given value."""
-  plan_not: Int
-
-  """All values that are contained in given list."""
-  plan_in: [Int!]
-
-  """All values that are not contained in given list."""
-  plan_not_in: [Int!]
-
-  """All values less than the given value."""
-  plan_lt: Int
-
-  """All values less than or equal the given value."""
-  plan_lte: Int
-
-  """All values greater than the given value."""
-  plan_gt: Int
-
-  """All values greater than or equal the given value."""
-  plan_gte: Int
-  user: UserWhereInput
-}
-
-input SLSubscriptionItemWhereUniqueInput {
-  id: ID
-}
-
-enum SLSubscriptionOrderByInput {
-  id_ASC
-  id_DESC
-  total_ASC
-  total_DESC
-  charge_ASC
-  charge_DESC
-  updatedAt_ASC
-  updatedAt_DESC
-  createdAt_ASC
-  createdAt_DESC
-}
-
-type SLSubscriptionPreviousValues {
-  id: ID!
-  total: Int!
-  charge: String!
-}
-
-type SLSubscriptionSubscriptionPayload {
-  mutation: MutationType!
-  node: SLSubscription
-  updatedFields: [String!]
-  previousValues: SLSubscriptionPreviousValues
-}
-
-input SLSubscriptionSubscriptionWhereInput {
-  """Logical AND on all given filters."""
-  AND: [SLSubscriptionSubscriptionWhereInput!]
-
-  """Logical OR on all given filters."""
-  OR: [SLSubscriptionSubscriptionWhereInput!]
-
-  """Logical NOT on all given filters combined by AND."""
-  NOT: [SLSubscriptionSubscriptionWhereInput!]
-
-  """
-  The subscription event gets dispatched when it's listed in mutation_in
-  """
-  mutation_in: [MutationType!]
-
-  """
-  The subscription event gets only dispatched when one of the updated fields names is included in this list
-  """
-  updatedFields_contains: String
-
-  """
-  The subscription event gets only dispatched when all of the field names included in this list have been updated
-  """
-  updatedFields_contains_every: [String!]
-
-  """
-  The subscription event gets only dispatched when some of the field names included in this list have been updated
-  """
-  updatedFields_contains_some: [String!]
-  node: SLSubscriptionWhereInput
-}
-
-input SLSubscriptionUpdateInput {
-  total: Int
-  charge: String
-  items: SLSubscriptionItemUpdateManyInput
-  user: UserUpdateOneRequiredInput
-}
-
-input SLSubscriptionUpdateManyMutationInput {
-  total: Int
-  charge: String
-}
-
-input SLSubscriptionWhereInput {
-  """Logical AND on all given filters."""
-  AND: [SLSubscriptionWhereInput!]
-
-  """Logical OR on all given filters."""
-  OR: [SLSubscriptionWhereInput!]
-
-  """Logical NOT on all given filters combined by AND."""
-  NOT: [SLSubscriptionWhereInput!]
-  id: ID
-
-  """All values that are not equal to given value."""
-  id_not: ID
-
-  """All values that are contained in given list."""
-  id_in: [ID!]
-
-  """All values that are not contained in given list."""
-  id_not_in: [ID!]
-
-  """All values less than the given value."""
-  id_lt: ID
-
-  """All values less than or equal the given value."""
-  id_lte: ID
-
-  """All values greater than the given value."""
-  id_gt: ID
-
-  """All values greater than or equal the given value."""
-  id_gte: ID
-
-  """All values containing the given string."""
-  id_contains: ID
-
-  """All values not containing the given string."""
-  id_not_contains: ID
-
-  """All values starting with the given string."""
-  id_starts_with: ID
-
-  """All values not starting with the given string."""
-  id_not_starts_with: ID
-
-  """All values ending with the given string."""
-  id_ends_with: ID
-
-  """All values not ending with the given string."""
-  id_not_ends_with: ID
-  total: Int
-
-  """All values that are not equal to given value."""
-  total_not: Int
-
-  """All values that are contained in given list."""
-  total_in: [Int!]
-
-  """All values that are not contained in given list."""
-  total_not_in: [Int!]
-
-  """All values less than the given value."""
-  total_lt: Int
-
-  """All values less than or equal the given value."""
-  total_lte: Int
-
-  """All values greater than the given value."""
-  total_gt: Int
-
-  """All values greater than or equal the given value."""
-  total_gte: Int
-  charge: String
-
-  """All values that are not equal to given value."""
-  charge_not: String
-
-  """All values that are contained in given list."""
-  charge_in: [String!]
-
-  """All values that are not contained in given list."""
-  charge_not_in: [String!]
-
-  """All values less than the given value."""
-  charge_lt: String
-
-  """All values less than or equal the given value."""
-  charge_lte: String
-
-  """All values greater than the given value."""
-  charge_gt: String
-
-  """All values greater than or equal the given value."""
-  charge_gte: String
-
-  """All values containing the given string."""
-  charge_contains: String
-
-  """All values not containing the given string."""
-  charge_not_contains: String
-
-  """All values starting with the given string."""
-  charge_starts_with: String
-
-  """All values not starting with the given string."""
-  charge_not_starts_with: String
-
-  """All values ending with the given string."""
-  charge_ends_with: String
-
-  """All values not ending with the given string."""
-  charge_not_ends_with: String
-  items_every: SLSubscriptionItemWhereInput
-  items_some: SLSubscriptionItemWhereInput
-  items_none: SLSubscriptionItemWhereInput
-  user: UserWhereInput
-}
-
-input SLSubscriptionWhereUniqueInput {
-  id: ID
-}
-
 type Subscription {
   cartItem(where: CartItemSubscriptionWhereInput): CartItemSubscriptionPayload
   order(where: OrderSubscriptionWhereInput): OrderSubscriptionPayload
-  sLSubscription(where: SLSubscriptionSubscriptionWhereInput): SLSubscriptionSubscriptionPayload
   item(where: ItemSubscriptionWhereInput): ItemSubscriptionPayload
   orderItem(where: OrderItemSubscriptionWhereInput): OrderItemSubscriptionPayload
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
-  sLSubscriptionItem(where: SLSubscriptionItemSubscriptionWhereInput): SLSubscriptionItemSubscriptionPayload
 }
 
 type User implements Node {
@@ -2351,6 +1585,7 @@ type UserConnection {
 }
 
 input UserCreateInput {
+  id: ID
   name: String!
   email: String!
   password: String!
@@ -2375,6 +1610,7 @@ input UserCreatepermissionsInput {
 }
 
 input UserCreateWithoutCartInput {
+  id: ID
   name: String!
   email: String!
   password: String!

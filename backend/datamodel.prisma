@@ -51,20 +51,3 @@ type Order {
   user: User!
   charge: String!
 }
-
-type SLSubscriptionItem {
-  id: ID! @unique
-  title: String!
-  description: String!
-  price: Int!
-  plan: Int! @default(value: 1)
-  user: User
-}
-
-type SLSubscription {
-  id: ID! @unique
-  items: [SLSubscriptionItem!]!
-  total: Int!
-  user: User!
-  charge: String!
-}
