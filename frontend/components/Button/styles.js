@@ -13,7 +13,6 @@ const ButtonStyles = styled.div`
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
 	border-radius:28px;
-	border:1px solid #000000;
 	display:inline-block;
 	cursor:pointer;
 	color:#000000;

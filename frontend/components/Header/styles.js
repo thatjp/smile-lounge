@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const HeaderStyles = styled.header`
   display: flex;
   position: fixed;
-  background: transparent;
+  /* background: transparent; */
+  background-color: ${props => (props ? props.scrollColor : 'transparent')};
   justify-content: space-between;
   float: ${props => (props.nav ? 'right' : null)};
   padding: 0px 60px;

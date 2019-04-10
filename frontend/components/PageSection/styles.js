@@ -19,9 +19,11 @@ const PageSectionStyles = styled.section`
     return null;
   }};
   border-bottom: 2px solid ${props => props.theme.black};
+  
   .page-section-text{
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 60px 0;
     h2 {
       text-align: center;
       margin: 0px;
@@ -31,6 +33,9 @@ const PageSectionStyles = styled.section`
       margin: 0px;
       color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
     }
+  }
+  .page-section-image{
+    
   }
 `;
 

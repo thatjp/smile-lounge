@@ -32,6 +32,8 @@ const PageSection = ({
             <p textColor={textColor}>
               {body}
             </p>
+          </div>
+          <div className="page-section-image">
             <Image1 />
           </div>
         </PageSectionStyle>

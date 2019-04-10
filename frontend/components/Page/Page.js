@@ -12,24 +12,47 @@ import {
 } from './styles';
 
 class Page extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      color: 'white',
+    };
+  }
+
   componentDidMount() {
     /*--------------------------------------------------
       Below is the code for https://www.intercom.com/
     --------------------------------------------------*/
-    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ey2yvrh1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+    (function () { let w = window; let ic = w.Intercom; if (typeof ic === 'function') { ic('reattach_activator'); ic('update', w.intercomSettings); } else{ let d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; let l = function () { let s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/ey2yvrh1'; let x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); }else { w.addEventListener('load', l, false); } } }());
 
     window.Intercom('boot', {
       app_id: 'ey2yvrh1',
     });
   }
 
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent);
+  }
+
+  listenScrollEvent = (e) => {
+    if (window.scrollY > 1) {
+      this.setState({ color: '#FFD7B9' });
+    } else {
+      this.setState({ color: 'transparent' });
+    }
+  }
+
   render() {
     const { children } = this.props;
+    const { color } = this.state;
+    console.log('color', color);
     return (
       <ThemeProvider theme={theme}>
         <StyledPage>
           <Meta />
-          <Header />
+          <Header color={color} />
           <Inner homepage="100%">
             { children }
           </Inner>

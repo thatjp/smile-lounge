@@ -4,6 +4,7 @@ import Link from 'next/link';
 import RightNavStyles from './styles';
 import User from '../User/User';
 import Signout from '../Signout/Signout';
+import Button from '../Button/Button';
 
 
 const Nav = () => (

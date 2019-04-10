@@ -17,9 +17,9 @@ Router.onRouteChangeError = () => {
   NProgress.done();
 };
 
-const Header = () => (
+const Header = ({ color }) => (
   <div className="bar">
-    <HeaderStyles>
+    <HeaderStyles scrollColor={color}>
       <div className="navigation">
         <LeftNav />
       </div>

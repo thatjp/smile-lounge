@@ -3,7 +3,7 @@ import Image1Styles from './styles';
 
 const Image1 = () => (
   <Image1Styles>
-    meep
+    <img src="../static/assets/banner-headtilt.jpg" alt="Smile House" />
   </Image1Styles>
 );
 
