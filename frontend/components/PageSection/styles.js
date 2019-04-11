@@ -19,23 +19,32 @@ const PageSectionStyles = styled.section`
     return null;
   }};
   border-bottom: 2px solid ${props => props.theme.black};
+
+  .page-section-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   
   .page-section-text{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 0;
+    max-width: 1500px;
+    margin: auto;
+    padding: 90px;
     h2 {
-      text-align: center;
+      font-size: 2vw;
+      text-align: left;
       margin: 0px;
       color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
     }
     p {
+      font-size: 1vw;
       margin: 0px;
       color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
     }
   }
   .page-section-image{
-    
+    border-left: 2px solid ${props => props.theme.black};
   }
 `;
 

@@ -25,16 +25,18 @@ const PageSection = ({
     case 'text/image':
       return (
         <PageSectionStyle color={color}>
-          <div className="page-section-text">
-            <h2 textColor={textColor}>
-              {title}
-            </h2>
-            <p textColor={textColor}>
-              {body}
-            </p>
-          </div>
-          <div className="page-section-image">
-            <Image1 />
+          <div className="page-section-container">
+            <div className="page-section-text">
+              <h2 textColor={textColor}>
+                {title}
+              </h2>
+              <p textColor={textColor}>
+                {body}
+              </p>
+            </div>
+            <div className="page-section-image">
+              <Image1 />
+            </div>
           </div>
         </PageSectionStyle>
       );

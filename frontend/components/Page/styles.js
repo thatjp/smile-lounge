@@ -58,6 +58,20 @@ injectGlobal`
     font-weight: normal;
     font-style: bold;
   }
+  @font-face {
+    font-family: 'Cormorant-Italic';
+    src: url('../static/fonts/Cormorant-Italic.ttf')
+    format('woff');
+    font-weight: normal;
+    font-style: bold;
+  }
+  @font-face {
+    font-family: 'Cormorant-Regular';
+    src: url('../static/fonts/Cormorant-Regular.ttf')
+    format('woff');
+    font-weight: normal;
+    font-style: bold;
+  }
   html, body {
     box-sizing: border-box;
     font-size: 10px;
