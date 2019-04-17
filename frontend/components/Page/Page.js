@@ -47,7 +47,6 @@ class Page extends Component {
   render() {
     const { children } = this.props;
     const { color } = this.state;
-    console.log('color', color);
     return (
       <ThemeProvider theme={theme}>
         <StyledPage>

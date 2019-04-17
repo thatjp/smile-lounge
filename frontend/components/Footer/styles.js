@@ -7,7 +7,9 @@ const FooterStyle = styled.div`
   background-color: ${props => props.theme.peach};
   /* height: 300px; */
   padding: 0px 50px;
+  
   @media (max-width: 700px) {
+    flex-direction: column;
     justify-content: left;
     padding: 0px;
   }
@@ -15,7 +17,7 @@ const FooterStyle = styled.div`
     font-size: 14px;
   }
   li {
-    width: 200px
+    width: 2vw;
   }
 `;
 

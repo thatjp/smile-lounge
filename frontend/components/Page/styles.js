@@ -22,6 +22,9 @@ const StyledPage = styled.div`
 const Inner = styled.div`
   background: ${props => props.theme.peach};
   padding: 100px 0px;
+  @media (max-width: 700px) {
+    padding: 45px 0px;
+  }
 `;
 
 const Banner = styled.div`

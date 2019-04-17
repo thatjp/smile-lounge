@@ -46,6 +46,18 @@ const PageSectionStyles = styled.section`
   .page-section-image{
     border-left: 2px solid ${props => props.theme.black};
   }
+  @media (max-width: 700px) {
+    border-bottom: 1px solid ${props => props.theme.black};
+    .page-section-text{
+      padding: 10px;
+    }
+    .page-section-image{
+      border-left: 2px solid ${props => props.theme.black};
+      img {
+        max-width: 50vw;
+      }
+  }
+  }
 `;
 
 export default PageSectionStyles;

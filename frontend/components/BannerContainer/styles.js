@@ -38,6 +38,40 @@ const BannerContainerStyles = styled.div`
       width: 80%;
     }
   }
+
+  @media (max-width: 700px) {
+    border-bottom: solid 1px ${props => props.theme.black};
+    
+    .banner-text {
+      position: absolute;
+      width: 50%;
+      text-align: left;
+      top: 0vw;
+      left: 20px;
+
+      h2 {
+        padding: 30px 0px 10px 0px;
+      }
+
+      p {
+        width: 80%;
+        font-size: 2vw;
+        color: ${props => props.theme.black}
+      }
+      
+      .container {
+        display: inline-block;
+        margin: 15px 0px;
+        text-align: center;
+      }
+    }
+    .image-container {
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export default BannerContainerStyles;

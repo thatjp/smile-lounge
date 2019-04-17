@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerContainer from '../BannerContainer/BannerContainer';
-import Carosel from '../Carosel/Carosel';
+// import Carosel from '../Carosel/Carosel';
 import { HomePageStyles, HomePageInnerStyle } from './styles';
 import PageSection from '../PageSection/PageSection';
 
