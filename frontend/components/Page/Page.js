@@ -31,7 +31,6 @@ class Page extends Component {
     });
   }
 
-
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent);
   }

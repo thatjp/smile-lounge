@@ -7,12 +7,7 @@ const index = () => (
     <div>
       <h2>Who We Are</h2>
       <p>
-        Smile Lounge brings the expertise of an orthodontist and the convenience of modern technology to smile
-        alignment. Our model allows close monitoring of your alignment to ensure that you are tracking, and 24 hour access to your
-        orthodontist via email and scheduled video check-ups. Your in-person appointments are reduced by 75%.
-
-        Dr. Ingrid Murra attended Vanderbilt University and studied dentistry at the New York University College of Dentistry. She
-        specialized in orthodontics and aligner therapy at the Harvard School of Dental Medicine.
+        Smile Lounge is a healthcare start-up shaking up the Clear Aligner Therapy (CAT) market by giving consumers access to the highest quality treatment. Treatment is carried out and monitored by orthodontists from start to finish at direct-to-consumer prices. We are empowering orthodontists to open patient-centric private practices by lowering the cost of CAT to orthodontists while providing an ecosystem to take care of small business hindrances.
       </p>
       <div className="map">
         
