@@ -33,6 +33,7 @@ const Form = styled.form`
       outline: 0;
       border-color: ${props => props.theme.red};
     }
+    -webkit-appearance: none;
   }
   button,
   input[type='submit'] {
@@ -43,6 +44,7 @@ const Form = styled.form`
     font-size: 2rem;
     font-weight: 600;
     padding: 0.5rem 1.2rem;
+    -webkit-appearance: none;
   }
   fieldset {
     border: 0;
@@ -51,12 +53,12 @@ const Form = styled.form`
     &[disabled] {
       opacity: 0.5;
     }
-    &::before {
+    /* &::before {
       height: 2px;
       content: '';
       display: block;
       background-image: linear-gradient(to right, #000000 0%, #ffffff 50%, #000000 100%);
-    }
+    } */
     &[aria-busy='true']::before {
       background-size: 50% auto;
       animation: ${loading} 0.5s linear infinite;
