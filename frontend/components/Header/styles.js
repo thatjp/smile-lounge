@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const HeaderStyles = styled.header`
   display: flex;
   position: fixed;
-  /* background: transparent; */
   background-color: ${props => (props ? props.scrollColor : 'transparent')};
   justify-content: space-between;
   float: ${props => (props.nav ? 'right' : null)};
@@ -14,13 +13,15 @@ const HeaderStyles = styled.header`
   z-index: 1000;
 
   img {
-    width: 200px;
+    width: 250px;
     padding: 20px;
   }
+
   .navigation {
     display: inline-block;
     align-self: center;
   }
+
   @media (max-width: 700px) {
       font-size: 10px;
       padding: 0 10px;

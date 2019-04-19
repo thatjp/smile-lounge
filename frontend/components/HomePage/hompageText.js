@@ -9,6 +9,7 @@ const pageSectionsText = [
   {
     id: '2',
     type: 'text/image',
+    side: 'left',
     backgroundColor: 'coral',
     title: 'Consultation',
     body: 'At your first appointment you and your Orthodontist will discuss your smile goals and determine if you qualify for invisible aligners. We’ll take a 3D scan of your teeth, and your Orthodontist will design your custom aligners based on your bespoke treatment plan. We are conveniently located in coworking spaces across New York City.',
@@ -16,6 +17,7 @@ const pageSectionsText = [
   {
     id: '3',
     type: 'text/image',
+    side: 'right',
     backgroundColor: 'peach',
     title: 'Treatment',
     body: 'Once your aligners are ready you’ll meet with your Orthodontist to ensure they fit perfectly (all of our aligners are made locally in Brooklyn!), and we’ll perform any oral maintenance, like buttons or shaping, if needed. You’ll then receive subsequent aligners every 3 months, sent directly to your doorstep. Throughout your treatment you’ll meet with your Orthodontist virtually, every 6 weeks, to ensure your teeth are aligning correctly and healthy!',
@@ -23,13 +25,14 @@ const pageSectionsText = [
   {
     id: '4',
     type: 'text/image',
+    side: 'left',
     backgroundColor: 'aqua',
     title: 'Success!',
     body: 'Once you’ve reached your goals, your Orthodontist will clean, polish, and smooth out your new smile. You’ll also receive custom retainers, so you can maintain the results you’ve created.',
   },
   {
     id: '5',
-    type: 'text/image',
+    type: 'text',
     textColor: 'offWhite',
     backgroundColor: 'darkGreen',
     title: 'Put your smile in the hands of a professional',
@@ -37,6 +40,7 @@ const pageSectionsText = [
   {
     id: '6',
     type: 'text/image',
+    side: 'left',
     backgroundColor: 'offWhite',
     title: 'Why Choose Smile Lounge?',
     body: 'We know nowadays that there are a handful of companies that provide custom made invisible aligners, so it can be hard to choose. At Smile Lounge, we believe that the convenience gained from having patients perform their own impressions and track their own progress falls short of the expertise provided by a trained Orthodontist. Our Orthodontists have undergone extensive training in tooth alignment, health, and understanding what exactly makes a beautiful smile – because it’s not always as simple as straightening your teeth. Smile Lounge is the only alignment company where specialty trained Orthodontists monitor you along every step of the way.',
@@ -50,4 +54,4 @@ const pageSectionsText = [
   },
 ];
 
-export { pageSectionsText };
+export default pageSectionsText;

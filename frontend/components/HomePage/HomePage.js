@@ -4,28 +4,26 @@ import BannerContainer from '../BannerContainer/BannerContainer';
 import { HomePageStyles, HomePageInnerStyle } from './styles';
 import PageSection from '../PageSection/PageSection';
 
-import { pageSectionsText } from './hompageText';
-let count = 0
+import pageSectionsText from './hompageText';
+
 const HomePage = () => (
   <HomePageStyles>
     <BannerContainer />
     <HomePageInnerStyle>
       {/* <Carosel sections={pageSectionsText} /> */}
       {
-        pageSectionsText.map(section => {
-          if (section.type === 'text/image') {
-            count ++
-          }
+        pageSectionsText.map((section) => {
           return (
-          <PageSection
-            // textSide={side}
-            key={section.id}
-            color={section.backgroundColor}
-            textColor={section.textColor}
-            type={section.type}
-            title={section.title}
-            body={section.body}
-          />)
+            <PageSection
+              textSide={section.side}
+              key={section.id}
+              color={section.backgroundColor}
+              textColor={section.textColor}
+              type={section.type}
+              title={section.title}
+              body={section.body}
+            />
+          );
         })
       }
     </HomePageInnerStyle>

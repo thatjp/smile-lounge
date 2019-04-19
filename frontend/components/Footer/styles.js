@@ -11,7 +11,6 @@ const FooterStyle = styled.div`
   margin-bottom: -400px;
   
   @media (max-width: 700px) {
-    flex-direction: column;
     justify-content: left;
     padding: 0px;
   }

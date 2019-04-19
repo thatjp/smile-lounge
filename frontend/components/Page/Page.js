@@ -37,7 +37,7 @@ class Page extends Component {
 
   listenScrollEvent = (e) => {
     if (window.scrollY > 1) {
-      this.setState({ color: '#FFD7B9' });
+      this.setState({ color: '#ffead9' });
     } else {
       this.setState({ color: 'transparent' });
     }

@@ -35,7 +35,7 @@ const PageSectionStyles = styled.section`
   }
   
   .page-section-text{
-    max-width: 1500px;
+    max-width: 50%;
     margin: auto;
     padding: 90px;
     text-align: center;
@@ -54,12 +54,12 @@ const PageSectionStyles = styled.section`
   }
 
   .page-section-text-picture{
-    max-width: 1500px;
+    max-width: 50%;
     margin: auto;
     padding: 90px;
     text-align: left;
     h2 {
-      font-size: 2vw;
+      font-size: 2.4vw;
       text-align: left;
       font-family: Cormorant-Italic;
       color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
@@ -72,15 +72,20 @@ const PageSectionStyles = styled.section`
     }
   }
 
-  .page-section-image{
+  .page-section-image {
     border-left: 2px solid ${props => props.theme.black};
   }
-  .page-section-image{
-    border-left: 2px solid ${props => props.theme.black};
+
+  .right {
+    border-right: 2px solid ${props => props.theme.black};
+    border-left: none;
   }
 
   @media (max-width: 700px) {
     border-bottom: 1px solid ${props => props.theme.black};
+    .page-section-text-picture{
+      padding: 10px;
+    }
     .page-section-text{
       padding: 10px;
     }

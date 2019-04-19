@@ -22,6 +22,27 @@ const LeftNavStyles = styled.div`
       font-size: 10px;
       padding: 0 10px;
     }
+
+    &:after {
+      height: 2px;
+      background: ${props => props.theme.black};
+      content: '';
+      width: 0;
+      position: absolute;
+      transform: translateX(-50%);
+      transition: width 0.4s;
+      transition-timing-function: cubic-bezier(1, -0.65, 0,);
+      left: 50%;
+      bottom: 22px;
+      margin-top: 20px;
+    }
+    &:hover,
+    &:focus {
+      outline: none;
+      &:after {
+        width: calc(100% - 60px);
+      }
+    }
   }
   @media (max-width: 1300px) {
     width: 100%;

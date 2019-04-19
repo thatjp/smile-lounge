@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import Image1 from '../Image1/Image1';
 import PageSectionStyle from './styles';
 
-let count = 0;
-
 const PageSection = ({
-  title, body, type, color, textColor,
+  title, body, type, color, textColor, textSide,
 }) => {
   switch (type) {
     case 'text':
@@ -25,9 +23,7 @@ const PageSection = ({
         </PageSectionStyle>
       );
     case 'text/image': {
-      count += 1;
-      console.log(count);
-      if (count % 2) {
+      if (textSide === 'left') {
         return (
           <PageSectionStyle color={color}>
             <div className="page-section-container-picture">
@@ -49,6 +45,9 @@ const PageSection = ({
       return (
         <PageSectionStyle color={color}>
           <div className="page-section-container-picture">
+            <div className="page-section-image right">
+              <Image1 />
+            </div>
             <div className="page-section-text-picture">
               <h2 textColor={textColor}>
                 {title}
@@ -56,9 +55,6 @@ const PageSection = ({
               <p textColor={textColor}>
                 {body}
               </p>
-            </div>
-            <div className="page-section-image">
-              <Image1 />
             </div>
           </div>
         </PageSectionStyle>
@@ -75,6 +71,7 @@ PageSection.propTypes = {
   title: PropTypes.string,
   color: PropTypes.string,
   body: PropTypes.string,
+  textSide: PropTypes.string,
   textColor: PropTypes.string,
 };
 
@@ -83,6 +80,7 @@ PageSection.defaultProps = {
   body: '',
   color: '',
   textColor: '',
+  textSide: '',
 };
 
 export default PageSection;

@@ -27,10 +27,10 @@ const Nav = () => (
         )}
         {!me && (
           <>
-            {/* <Link href="/signin">
-              <a>Log In</a>
-            </Link> */}
             <Button text="Sign Up" type="link" />
+            {/* <div>
+              <img src="../static/assets/icons/hamburger-menu.svg" alt="Smile House" />
+            </div> */}
           </>
         )}
       </RightNavStyles>
