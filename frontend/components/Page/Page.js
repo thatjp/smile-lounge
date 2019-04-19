@@ -16,7 +16,7 @@ class Page extends Component {
     super(props);
 
     this.state = {
-      color: 'white',
+      color: 'transparent',
     };
   }
 
@@ -24,7 +24,7 @@ class Page extends Component {
     /*--------------------------------------------------
       Below is the code for https://www.intercom.com/
     --------------------------------------------------*/
-    (function () { let w = window; let ic = w.Intercom; if (typeof ic === 'function') { ic('reattach_activator'); ic('update', w.intercomSettings); } else{ let d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; let l = function () { let s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/ey2yvrh1'; let x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); }else { w.addEventListener('load', l, false); } } }());
+    (function () { const w = window; const ic = w.Intercom; if (typeof ic === 'function') { ic('reattach_activator'); ic('update', w.intercomSettings); } else { const d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; const l = function () { const s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/ey2yvrh1'; const x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } }());
 
     window.Intercom('boot', {
       app_id: 'ey2yvrh1',

@@ -26,16 +26,25 @@ const PageSectionStyles = styled.section`
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .page-section-container-picture{
+    display: flex;
+    flex-direction: row;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
   
   .page-section-text{
     max-width: 1500px;
     margin: auto;
     padding: 90px;
-    h2 {
-      font-size: 2vw;
-      text-align: left;
-      margin: 0px;
-      color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
+    text-align: center;
+    h3 {
+      font-size: 1vw;
+      text-align: center;
+      font-family: Cormorant-Italic;
+      color: grey;
+      margin: 0px;      
     }
     p {
       font-size: 1vw;
@@ -43,9 +52,33 @@ const PageSectionStyles = styled.section`
       color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
     }
   }
+
+  .page-section-text-picture{
+    max-width: 1500px;
+    margin: auto;
+    padding: 90px;
+    text-align: left;
+    h2 {
+      font-size: 2vw;
+      text-align: left;
+      font-family: Cormorant-Italic;
+      color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
+      margin: 0px;      
+    }
+    p {
+      font-size: 1vw;
+      margin: 0px;
+      color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
+    }
+  }
+
   .page-section-image{
     border-left: 2px solid ${props => props.theme.black};
   }
+  .page-section-image{
+    border-left: 2px solid ${props => props.theme.black};
+  }
+
   @media (max-width: 700px) {
     border-bottom: 1px solid ${props => props.theme.black};
     .page-section-text{

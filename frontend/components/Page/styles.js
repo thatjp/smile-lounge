@@ -4,12 +4,12 @@ const theme = {
   red: '#ff0000',
   black: '#393939',
   grey: '#3A3A3A',
-  peach: '#FFD7B9',
-  coral: '#C3FFCC',
-  offWhite: '#F3FFF9',
+  peach: '#ffead9',
+  coral: '#dfffdc',
+  offWhite: '#f0f6f4',
   aqua: '#C5FFFD',
   lightgrey: '#E1E1E1',
-  darkGreen: '#093d31',
+  darkGreen: '#002a27',
   maxWidth: '100%',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
@@ -22,6 +22,7 @@ const StyledPage = styled.div`
 const Inner = styled.div`
   background: ${props => props.theme.peach};
   padding: 100px 0px;
+  height: 100%;
   @media (max-width: 700px) {
     padding: 45px 0px;
   }

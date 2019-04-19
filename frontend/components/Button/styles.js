@@ -17,10 +17,11 @@ const ButtonStyles = styled.div`
 	cursor:pointer;
 	color:#000000;
 	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
+	font-size:12px;
+	padding: 0px 15px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #d6d6d6;
+	border: none;
 }
 .myButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff));

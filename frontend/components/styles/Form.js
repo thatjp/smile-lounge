@@ -34,6 +34,7 @@ const Form = styled.form`
       border-color: ${props => props.theme.red};
     }
     -webkit-appearance: none;
+    border-radius: 0;
   }
   button,
   input[type='submit'] {
@@ -45,6 +46,7 @@ const Form = styled.form`
     font-weight: 600;
     padding: 0.5rem 1.2rem;
     -webkit-appearance: none;
+    border-radius: 0;
   }
   fieldset {
     border: 0;

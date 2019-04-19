@@ -27,12 +27,10 @@ const Nav = () => (
         )}
         {!me && (
           <>
-            <Link href="/signin">
+            {/* <Link href="/signin">
               <a>Log In</a>
-            </Link>
-            <Link href="/signup">
-              <a>Sign Up</a>
-            </Link>
+            </Link> */}
+            <Button text="Sign Up" type="link" />
           </>
         )}
       </RightNavStyles>
