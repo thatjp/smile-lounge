@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { isMobile } from 'react-device-detect';
 import Image1 from '../Image1/Image1';
 import PageSectionStyle from './styles';
 
@@ -35,9 +36,13 @@ const PageSection = ({
                   {body}
                 </p>
               </div>
-              <div className="page-section-image">
-                <Image1 />
-              </div>
+              {!isMobile
+                && (
+                <div className="page-section-image right">
+                  <Image1 />
+                </div>
+                )
+              }
             </div>
           </PageSectionStyle>
         );
@@ -45,9 +50,13 @@ const PageSection = ({
       return (
         <PageSectionStyle color={color}>
           <div className="page-section-container-picture">
-            <div className="page-section-image right">
-              <Image1 />
-            </div>
+            {!isMobile
+              && (
+              <div className="page-section-image right">
+                <Image1 />
+              </div>
+              )
+            }
             <div className="page-section-text-picture">
               <h2 textColor={textColor}>
                 {title}

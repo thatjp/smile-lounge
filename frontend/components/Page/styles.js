@@ -15,14 +15,14 @@ const theme = {
 };
 
 const StyledPage = styled.div`
-  height: 100%;
   color: ${props => props.theme.black};
 `;
 
 const Inner = styled.div`
   background: ${props => props.theme.peach};
   padding: 109px 0px;
-  height: 100%;
+  flex: 1;
+
   @media (max-width: 700px) {
     padding: 45px 0px;
   }
@@ -81,7 +81,6 @@ injectGlobal`
     font-size: 10px;
     margin: 0;
     padding: 0;
-    height: 100%;
   }
   *, *:before, *:after {
     box-sizing: inherit;

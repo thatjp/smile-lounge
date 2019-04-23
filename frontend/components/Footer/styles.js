@@ -5,10 +5,7 @@ const FooterStyle = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: ${props => props.theme.peach};
-  /* height: 300px; */
   padding: 50px;
-  height: 400px;
-  margin-bottom: -400px;
   
   @media (max-width: 700px) {
     justify-content: left;

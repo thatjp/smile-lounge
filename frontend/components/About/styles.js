@@ -5,6 +5,7 @@ const AboutPageStyles = styled.div`
   justify-content: center;
   padding: 30px 300px;
   text-align: center;
+  min-height: 60vh;
   h2 {
     font-size: 30px;
   }

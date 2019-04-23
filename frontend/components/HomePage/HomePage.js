@@ -5,6 +5,7 @@ import { HomePageStyles, HomePageInnerStyle } from './styles';
 import PageSection from '../PageSection/PageSection';
 
 import pageSectionsText from './hompageText';
+import Footer from '../Footer/Footer';
 
 const HomePage = () => (
   <HomePageStyles>

@@ -85,9 +85,27 @@ const PageSectionStyles = styled.section`
     border-bottom: 1px solid ${props => props.theme.black};
     .page-section-text-picture{
       padding: 10px;
+      max-width: 90%;
+      padding: 10px;
+      h2 {
+        text-align: center;
+        font-size: 5vw;
+      }
+      p {
+        font-size: 3vw;
+        text-align: center;
+      }
     }
     .page-section-text{
       padding: 10px;
+      max-width: 90%;
+      padding: 10px;
+      h3 {
+        font-size: 5vw;
+      }
+      p {
+        font-size: 3vw;
+      }
     }
     .page-section-image{
       border-left: 2px solid ${props => props.theme.black};
