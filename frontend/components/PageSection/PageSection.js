@@ -38,7 +38,7 @@ const PageSection = ({
               </div>
               {!isMobile
                 && (
-                <div className="page-section-image right">
+                <div className="page-section-image">
                   <Image1 />
                 </div>
                 )

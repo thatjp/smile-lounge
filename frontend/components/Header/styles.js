@@ -18,14 +18,22 @@ const HeaderStyles = styled.header`
   }
 
   .navigation {
+    order: 1;
     display: inline-block;
     align-self: center;
+    .menu-hamburger {
+      width: 30px;
+    }
   }
 
   @media (max-width: 700px) {
       font-size: 10px;
       padding: 0 10px;
+      /* .navigation {
+        order: 2;
+      } */
       img {
+        margin: 10px;
         width: 40vw;
         padding: 1vw;
       }

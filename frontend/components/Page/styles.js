@@ -24,7 +24,8 @@ const Inner = styled.div`
   flex: 1;
 
   @media (max-width: 700px) {
-    padding: 45px 0px;
+    padding: 80px 0px;
+    
   }
 `;
 
