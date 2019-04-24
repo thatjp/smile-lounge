@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { isMobile } from 'react-device-detect';
-import Image1 from '../Image1/Image1';
+import Image from '../Image/Image';
 import PageSectionStyle from './styles';
 
 const PageSection = ({
-  title, body, type, color, textColor, textSide,
+  title, body, type, color, textColor, textSide, imgPath,
 }) => {
   switch (type) {
     case 'text':
@@ -39,7 +39,7 @@ const PageSection = ({
               {!isMobile
                 && (
                 <div className="page-section-image">
-                  <Image1 />
+                  <Image imgPath={imgPath} />
                 </div>
                 )
               }
@@ -53,7 +53,7 @@ const PageSection = ({
             {!isMobile
               && (
               <div className="page-section-image right">
-                <Image1 />
+                <Image imgPath={imgPath} />
               </div>
               )
             }

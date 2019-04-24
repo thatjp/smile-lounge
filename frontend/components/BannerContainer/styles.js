@@ -34,8 +34,9 @@ const BannerContainerStyles = styled.div`
 
   .image-container {
     img {
+      margin-left: 400px;
       display: block;
-      width: 80%;
+      width: 70%;
     }
   }
 

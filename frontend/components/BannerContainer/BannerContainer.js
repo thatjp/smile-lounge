@@ -12,7 +12,7 @@ const buttonText = 'book a consultation!';
 const BannerContainer = () => (
   <BannerContainerStyles>
     <div className="image-container">
-      <img src="../static/assets/banner-headtilt.jpg" alt="Smile House" />
+      <img src="../static/assets/banner-main.png" alt="Smile House" />
     </div>
     <div className="banner-text">
       <h2>{title}</h2>
