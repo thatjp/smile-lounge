@@ -68,6 +68,7 @@ const BannerContainerStyles = styled.div`
     }
     .image-container {
       img {
+        margin-left: 0px;
         display: block;
         width: 100%;
       }
