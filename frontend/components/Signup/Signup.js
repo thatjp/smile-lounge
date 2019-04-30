@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import Error from '../ErrorMessage/ErrorMessage';
 import { CURRENT_USER_QUERY } from '../User/User';
 import Form from '../styles/Form';
+import SignupStyles from './styles';
 
 const SIGNUP_MUTATION = gql`
   mutation SIGNUP_MUTATION(
@@ -43,11 +44,12 @@ class Signup extends Component {
       email, name, password, wasSubmitted,
     } = this.state;
     return (
-      <>
+      <SignupStyles>
         { wasSubmitted
           ? (
-            <div>
-              Thanks for your submission
+            <div className="confirmation-modal">
+              <h3>Thank you for your interest!</h3>
+              <p>We will be reaching out to you with updates soon.</p>
             </div>
           ) : (
             <Mutation
@@ -112,7 +114,7 @@ class Signup extends Component {
           }
             </Mutation>
           ) }
-      </>
+      </SignupStyles>
     );
   }
 }
