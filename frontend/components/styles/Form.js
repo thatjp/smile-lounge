@@ -13,7 +13,6 @@ const loading = keyframes`
 `;
 
 const Form = styled.form`
-  border: .5px solid ${props => props.theme.black};
   padding: 20px;
   font-size: 1.5rem;
   line-height: 1.5;
@@ -28,7 +27,6 @@ const Form = styled.form`
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
-    border: 1px solid black;
     &:focus {
       outline: 0;
       border-color: ${props => props.theme.red};

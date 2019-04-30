@@ -22,8 +22,11 @@ Router.onRouteChangeError = () => {
 const renderRightNav = () => {
   if (isMobile) {
     return (
-      <div className="navigation">
-        <img className="menu-hamburger" src="../static/icons/hamburger-menu.png" alt="Smile House" />
+      // <div className="navigation">
+      //   <img className="menu-hamburger" src="../static/icons/hamburger-menu.png" alt="Smile House" />
+      // </div>
+      <div>
+        
       </div>
     );
   }

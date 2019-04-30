@@ -9,9 +9,7 @@ const HomePage = () => (
     <BannerContainer />
     <HomePageInnerStyle>
       {
-        pageSectionsText.map(section => {
-          console.log('section', section.imgPath);
-          return (
+        pageSectionsText.map(section => (
           <PageSection
             textSide={section.side}
             key={section.id}
@@ -21,8 +19,7 @@ const HomePage = () => (
             title={section.title}
             body={section.body}
             imgPath={section.imgPath}
-          />)
-        })
+          />))
       }
     </HomePageInnerStyle>
   </HomePageStyles>

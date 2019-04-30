@@ -35,19 +35,19 @@ const PageSectionStyles = styled.section`
   }
   
   .page-section-text{
-    max-width: 50%;
+    max-width: 80%;
     margin: auto;
     padding: 90px;
     text-align: center;
     h3 {
-      font-size: 1vw;
+      font-size: 1.5vw;
       text-align: center;
       font-family: Cormorant-Italic;
       color: grey;
       margin: 0px;      
     }
     p {
-      font-size: 1vw;
+      font-size: 1.5vw;
       margin: 0px;
       color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
     }
@@ -66,7 +66,7 @@ const PageSectionStyles = styled.section`
       margin: 0px;      
     }
     p {
-      font-size: 1vw;
+      font-size: 1.5vw;
       margin: 0px;
       color: ${props => (props.textColor === 'offWhite' ? props.theme.offWhite : props.theme.black)};
     }

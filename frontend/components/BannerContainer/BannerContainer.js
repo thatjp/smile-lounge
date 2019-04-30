@@ -7,7 +7,7 @@ const title = 'Give your smile the concierge treatment';
 
 const body = 'Straighten your teeth with our custom-designed invisible aligners. Under the supervision of an Orthodontist from start to finish.';
 
-const buttonText = 'book a consultation!';
+const buttonText = 'sign up for updates!';
 
 const BannerContainer = () => (
   <BannerContainerStyles>
