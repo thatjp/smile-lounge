@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SignupStyles = styled.div`
   .confirmation-modal {

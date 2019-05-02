@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const loading = keyframes`
   from {
@@ -17,6 +17,10 @@ const Form = styled.form`
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 600;
+  h2 {
+    text-align: center;
+    padding: 30px;
+  }
   label {
     display: block;
     margin-bottom: 1rem;
@@ -26,40 +30,41 @@ const Form = styled.form`
   select {
     width: 100%;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     &:focus {
-      outline: 0;
-      border-color: ${props => props.theme.red};
+      outline: none;
     }
     -webkit-appearance: none;
     border-radius: 0;
+    border-style: solid;
+    border: none;
+    border-radius: 5px;
   }
+
   button,
-  input[type='submit'] {
-    width: auto;
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 15px;
     background: #ffffff;
     color: #000000;
-    border: 1px solid #000000;
     font-size: 2rem;
     font-weight: 600;
     padding: 0.5rem 1.2rem;
     -webkit-appearance: none;
+    -webkit-appearance: none;
     border-radius: 0;
+    border-style: solid;
+    border: none;
+    border-radius: 5px;
   }
+
   fieldset {
     border: 0;
     padding: 0;
-
     &[disabled] {
       opacity: 0.5;
     }
-    /* &::before {
-      height: 2px;
-      content: '';
-      display: block;
-      background-image: linear-gradient(to right, #000000 0%, #ffffff 50%, #000000 100%);
-    } */
-    &[aria-busy='true']::before {
+    &[aria-busy="true"]::before {
       background-size: 50% auto;
       animation: ${loading} 0.5s linear infinite;
     }
