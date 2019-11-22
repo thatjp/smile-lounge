@@ -1,4 +1,3 @@
-// allows us to affect the remote graphql server with javaxript
 const { Prisma } = require('prisma-binding');
 
 const db = new Prisma({
